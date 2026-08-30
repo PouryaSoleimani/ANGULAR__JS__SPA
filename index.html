@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./bootstrap.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>ANGULAR_JS_SPA</title>
+
+  <script src="./SCRIPTS/angular.js"></script>
+  <script src="./SCRIPTS/angular-route.js"></script>
+  <script src="./MY_SCRIPTS/module.js"></script>
+</head>
+
+<body>
+  <div class="container" ng-app="PersonApp">
+    <div class="input__wrapper">
+      <h1>MANAGE PEOPLE</h1>
+    </div>
+
+    <div class="tags">
+      <a href="#!List" class="btn btn-default">List Person</a>
+      <a href="#!AddNewPerson" class="btn btn-default">Add New Person</a>
+      <a href="#!EditPerson" class="btn btn-default">Edit Person</a>
+    </div>
+
+    <div ng-view></div>
+  </div>
+
+</body>
+
+</html>
