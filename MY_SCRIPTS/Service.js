@@ -1,10 +1,8 @@
 app.service('PersonService', function ($http) {
-
+  const baseURL = 'https://fakestoreapi.com/users'
   this.getAllPerson = function () {
-    return $http.get('http://localhost:10304/api/people', {
-      headers: {
-        'Content-Type': "Application/json"
-      }
+    return $http.get(baseURL, {
+      headers: { 'Content-Type': "Application/json" }
     })
   }
 
