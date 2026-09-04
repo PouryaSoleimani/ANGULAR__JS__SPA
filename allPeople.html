@@ -1,3 +1,18 @@
 <section id="ALL_PEOPLE_SECTION">
   <h2 class="all_h2">ALL PEOPLE</h2>
+
+  <table class="table table-bordered">
+    <tr>
+      <th>Name</th>
+      <th>Family</th>
+      <th>Age</th>
+      <th>Commands</th>
+    </tr>
+    <tr ng-repeat="p in people track by $index">
+      <td>{{p.Name}}</td>
+      <td>{{p.Family}}</td>
+      <td>{{p.Age}}</td>
+      <td>Commands</td>
+    </tr>
+  </table>
 </section>
