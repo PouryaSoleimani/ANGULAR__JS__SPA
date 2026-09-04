@@ -9,8 +9,9 @@ app.factory("SharedData", function () {
 
 // APP CONFIG ===========================================================
 app.config(["$routeProvider", function ($routeProvider) {
+
   $routeProvider.when("/", {
-    templateUrl: "/list.html",
+    templateUrl: "/allPeople.html",
     controller: "AllPeopleController"
   })
 
