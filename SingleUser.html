@@ -3,13 +3,11 @@
 
   <div ng-hide="user" class="no__users">
     <i class="ph-fill ph-seal-warning"></i>
-    NO USERS
+    NO USER WERE FOUND
   </div>
 
   <div ng-show="user" class="single__user__card">
-    <p> {{user.id}}. {{user.name.firstname.toUpperCase()}} {{user.name.lastname.toUpperCase()}}</p>
-    <br>
-    <br>
-    <p>Email : {{user.email}}</p>
+    <i class="ph-fill ph-person"></i>
+    <p>{{user.name.firstname.toUpperCase()}} {{user.name.lastname.toUpperCase()}}</p>
   </div>
 </section>

@@ -2,21 +2,24 @@
   <h2 class="all_h2">ALL PEOPLE</h2>
   <div class="loading__div" ng-show="!people">LOADING</div>
 
-  <table ng-show="people" class="table table-bordered">
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Family</th>
-      <th>Username</th>
-      <th>Commands</th>
-    </tr>
+  <div ng-show="people" class="users__table">
+    <div class="table__head">
+      <p>ID</p>
+      <p>Name</p>
+      <p>Family</p>
+      <p>Username</p>
+      <p>Commands</p>
+    </div>
     <!-- NG_REPEAT -->
-    <tr ng-repeat="p in people track by $index">
-      <td>{{p.id}}</td>
-      <td>{{p.name.firstname}}</td>
-      <td>{{p.name.lastname}}</td>
-      <td>{{p.username}}</td>
-      <td>Commands</td>
-    </tr>
-  </table>
+    <div class="table__body">
+      <div class="table__row" ng-repeat="p in people track by $index">
+        <p>{{p.id}}</p>
+        <p>{{p.name.firstname}}</p>
+        <p>{{p.name.lastname}}</p>
+        <p>{{p.username}}</p>
+        <p>Commands</p>
+      </div>
+    </div>
+
+  </div>
 </section>

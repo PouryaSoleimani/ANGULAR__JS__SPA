@@ -408,13 +408,16 @@ section {
 .no__users {
   display: grid;
   place-items: center;
-  font-size: 32px;
+  font-size: 22px;
   background-color: var(--background);
   width: fit-content;
   padding: 32px;
-  margin: 32px auto;
+  margin: 24px auto;
+  height: 200px;
   border-radius: 12px;
-  outline: 6px solid #00000050;
+  box-shadow: 3px 4px 12px #00000050;
+  outline: 3px solid #00000030;
+  width: 300px;
   gap: 8px;
   i {
     font-size: 40px;
@@ -424,17 +427,93 @@ section {
 
 .single__user__card {
   outline: 3px solid #00000030;
-  border-radius: 16px;
+  border-radius: 12px;
   padding: 12px;
   width: 300px;
   height: 200px;
   margin: 24px auto;
   box-shadow: 3px 4px 12px #00000050;
   background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 24px;
+  i {
+    font-size: 32px;
+  }
 }
 
 .loading__div {
   display: grid;
   place-items: center;
   height: 60dvh;
+}
+
+.users__table {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  outline: 6px solid #00000030;
+  margin-block-start: 24px;
+  margin-inline: 24px;
+  box-shadow: 0px 0px 10px #60606020;
+
+  * {
+    user-select: none;
+  }
+}
+
+.table__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  border-bottom: 2px solid #60606030;
+
+  p {
+    width: 100%;
+    text-align: center;
+    padding-block: 12px;
+    border-right: 1px solid #60606030;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
+
+.table__body {
+  display: flex;
+  flex-direction: column;
+}
+
+.table__row {
+  display: flex;
+  border-bottom: 1px solid #60606030;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(101, 101, 101, 0.542) !important;
+    color: white;
+  }
+
+  &:nth-child(odd) {
+    background-color: #cccccc60;
+  }
+
+  p {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    border-right: 1px solid #60606030;
+    align-items: center;
+    justify-content: center;
+    padding-block: 8px;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
 }
