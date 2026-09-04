@@ -1,7 +1,5 @@
 var app = angular.module('UsersApp', ["ngRoute"]) // DEPENDENCIES => NG_ROUTE
 
-function ListController($scope) { }
-
 // APP.FACTORY ==========================================================
 app.factory("SharedData", function () {
   return { value: 0 }

@@ -432,3 +432,9 @@ section {
   box-shadow: 3px 4px 12px #00000050;
   background-color: var(--background);
 }
+
+.loading__div {
+  display: grid;
+  place-items: center;
+  height: 60dvh;
+}

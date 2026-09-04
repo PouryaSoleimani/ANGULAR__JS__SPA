@@ -1,7 +1,8 @@
 <section id="ALL_PEOPLE_SECTION">
   <h2 class="all_h2">ALL PEOPLE</h2>
+  <div class="loading__div" ng-show="!people">LOADING</div>
 
-  <table class="table table-bordered">
+  <table ng-show="people" class="table table-bordered">
     <tr>
       <th>ID</th>
       <th>Name</th>
