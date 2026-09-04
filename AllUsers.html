@@ -2,9 +2,10 @@
   <h2 class="all_h2">ALL PEOPLE</h2>
   <div class="loading__div" ng-show="!people">LOADING</div>
 
-  <div ng-show="people && !people.length">USERS LIST IS EMPTY</div>
+  <div class="no__users" ng-show="people && !people.length">USERS LIST IS EMPTY</div>
 
   <div ng-show="people && people.length" class="users__table">
+    <!-- TABLE HEAD -->
     <div class="table__head">
       <p>ID</p>
       <p>Name</p>
@@ -12,7 +13,7 @@
       <p>Username</p>
       <p>Commands</p>
     </div>
-    <!-- NG_REPEAT -->
+    <!-- TABLE__BODY | NG_REPEAT -->
     <div class="table__body">
       <div class="table__row" ng-repeat="p in people track by $index">
         <p>{{p.id}}</p>
