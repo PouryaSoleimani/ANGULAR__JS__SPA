@@ -10,7 +10,7 @@ app.controller('AddPersonController',
       }
       var result = PersonService.addPersoon(person)
       result.then(function () {
-        $location.path('/x')
+        $location.path('/')
       })
     }
   }) 

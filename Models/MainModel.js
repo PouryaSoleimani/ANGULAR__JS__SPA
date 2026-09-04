@@ -1,4 +1,4 @@
-var app = angular.module('PersonApp', ["ngRoute"]) // DEPENDENCIES => NG_ROUTE
+var app = angular.module('UsersApp', ["ngRoute"]) // DEPENDENCIES => NG_ROUTE
 
 function ListController($scope) { }
 
@@ -22,7 +22,7 @@ app.config(["$routeProvider", function ($routeProvider) {
 
   $routeProvider.when("/SingleUser", {
     templateUrl: "/SingleUser.html",
-    controller: "AllPeopleController"
+    controller: "SingleUserController"
   })
 
   // $routeProvider.when("/AddNewPerson", {
