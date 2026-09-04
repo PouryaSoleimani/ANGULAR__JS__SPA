@@ -1,6 +1,6 @@
 app.service('PersonService', function ($http) {
   const BASE_URL = 'https://fakestoreapi.com/users'
-  
+
   this.getAllPerson = function () {
     return $http.get(BASE_URL, {
       headers: { 'Content-Type': "Application/json" }
