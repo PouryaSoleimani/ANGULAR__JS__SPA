@@ -1,7 +1,11 @@
 app.service('PersonService', function ($http) {
 
   this.getAllPerson = function () {
-    return $http.get('http://localhost:10304/api/people')
+    return $http.get('http://localhost:10304/api/people', {
+      headers: {
+        'Content-Type': "Application/json"
+      }
+    })
   }
 
   this.getPersonById = function (id) {
@@ -33,4 +37,4 @@ app.service('PersonService', function ($http) {
     })
     return result;
   }
-})
+}) 
