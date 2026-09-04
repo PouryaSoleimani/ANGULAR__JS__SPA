@@ -1,3 +1,14 @@
 <section id="SINGLE_USER_SECTION">
   <input type="text" ng-model="ID" ng-change="InputLogger()" placeholder="Enter User ID to Search">
+
+  <div ng-hide="user" class="no__users">
+    <i class="ph-fill ph-seal-warning"></i>
+    NO USERS
+  </div>
+
+  <div ng-show="user" class="single__user__card">
+    <p> {{user.id}}. {{user.name.firstname.toUpperCase()}} {{user.name.lastname.toUpperCase()}}</p>
+    <hr>
+    <p>Email : {{user.email}}</p>
+  </div>
 </section>

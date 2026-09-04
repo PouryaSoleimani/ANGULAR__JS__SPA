@@ -1,4 +1,5 @@
 app.controller('AddPersonController',
+
   function ($scope, $location, PersonService) {
     $scope.ID = 0
     $scope.save = function () {
