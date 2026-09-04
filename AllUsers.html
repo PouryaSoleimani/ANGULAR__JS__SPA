@@ -2,7 +2,9 @@
   <h2 class="all_h2">ALL PEOPLE</h2>
   <div class="loading__div" ng-show="!people">LOADING</div>
 
-  <div ng-show="people" class="users__table">
+  <div ng-show="people && !people.length">USERS LIST IS EMPTY</div>
+
+  <div ng-show="people && people.length" class="users__table">
     <div class="table__head">
       <p>ID</p>
       <p>Name</p>
@@ -17,7 +19,14 @@
         <p>{{p.name.firstname}}</p>
         <p>{{p.name.lastname}}</p>
         <p>{{p.username}}</p>
-        <p>Commands</p>
+        <p class="buttons">
+          <button class="btn md btn-danger" ng-click="userDeleteHandler(p.id)">
+            <i class="ph-fill ph-trash-simple"></i>
+          </button>
+          <button class="btn md">
+            <i class="ph-fill ph-pen"></i>
+          </button>
+        </p>
       </div>
     </div>
 
