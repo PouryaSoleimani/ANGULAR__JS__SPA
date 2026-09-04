@@ -11,12 +11,17 @@ app.factory("SharedData", function () {
 app.config(["$routeProvider", function ($routeProvider) {
 
   $routeProvider.when("/", {
-    templateUrl: "/allPeople.html",
+    templateUrl: "/AllUsers.html",
     controller: "AllPeopleController"
   })
 
-  $routeProvider.when("/AllPeople", {
-    templateUrl: "/allPeople.html",
+  $routeProvider.when("/AllUsers", {
+    templateUrl: "/AllUsers.html",
+    controller: "AllPeopleController"
+  })
+
+  $routeProvider.when("/SingleUser", {
+    templateUrl: "/SingleUser.html",
     controller: "AllPeopleController"
   })
 

@@ -70,7 +70,10 @@ button {
   border-radius: 6px;
   height: 34px;
   text-transform: uppercase;
-
+  &:focus {
+    border: none;
+    outline: none;
+  }
   &:active {
     scale: 0.95;
   }
@@ -382,6 +385,15 @@ section {
 
 .tags {
   margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 8px;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 8px;
+  .btn {
+    width: 100%;
+  }
 }
 
 // SECTIONS 
