@@ -6,6 +6,7 @@
   --destructive: rgb(194, 52, 52);
   --blue: #6495ed;
   --success: rgb(101, 201, 101);
+  --primary: #808080;
 }
 
 body {
@@ -382,4 +383,13 @@ section {
 
 .tags {
   margin-top: 12px;
+}
+
+// SECTIONS 
+#ALL_PEOPLE_SECTION {
+  --primary: #105f90;
+  background-color: black;
+  .all_h2 {
+    color: var(--primary);
+  }
 }
