@@ -5,7 +5,7 @@ app.factory("SharedData", function () {
   return { value: 0 }
 })
 
-// APP CONFIG ===========================================================
+// APP CONFIG | ROUTE_PROVIDER ===========================================================
 app.config(["$routeProvider", function ($routeProvider) {
 
   $routeProvider.when("/", {
