@@ -1,18 +1,19 @@
 app.service('PersonService', function ($http) {
-  const baseURL = 'https://fakestoreapi.com/users'
+  const BASE_URL = 'https://fakestoreapi.com/users'
+  
   this.getAllPerson = function () {
-    return $http.get(baseURL, {
+    return $http.get(BASE_URL, {
       headers: { 'Content-Type': "Application/json" }
     })
   }
 
   this.getPersonById = function (id) {
-    return $http.get(`http://localhost:10304/api/people/${+id}`)
+    return $http.get(`${BASE_URL}${+id}`)
   }
 
   this.addPerson = function (person) {
     var result = $http({
-      url: `http://localhost:10304/api/people`,
+      url: `${BASE_URL}`,
       method: 'POST',
       data: person
     })
@@ -21,7 +22,7 @@ app.service('PersonService', function ($http) {
 
   this.editPerson = function (id, person) {
     var result = $http({
-      url: `http://localhost:10304/api/people/${+id}`,
+      url: `${BASE_URL}${+id}`,
       method: "PUT",
       data: person,
     })
@@ -30,7 +31,7 @@ app.service('PersonService', function ($http) {
 
   this.deletePerson = function (id) {
     var result = $http({
-      url: `http://localhost:10304/api/people/${+id}`,
+      url: `${BASE_URL}${+id}`,
       method: "DELETE"
     })
     return result;

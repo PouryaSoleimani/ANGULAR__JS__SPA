@@ -172,7 +172,6 @@ section {
   border-radius: 16px;
   background-color: var(--secondary-background);
   min-height: 80dvh;
-  max-height: 80dvh;
   overflow-y: auto;
   scrollbar-width: none;
   outline: 4px solid var(--border);

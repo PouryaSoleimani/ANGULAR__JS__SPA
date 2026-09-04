@@ -3,15 +3,17 @@
 
   <table class="table table-bordered">
     <tr>
+      <th>ID</th>
       <th>Name</th>
       <th>Family</th>
-      <th>Age</th>
+      <th>Username</th>
       <th>Commands</th>
     </tr>
     <tr ng-repeat="p in people track by $index">
-      <td>{{p.Name}}</td>
-      <td>{{p.Family}}</td>
-      <td>{{p.Age}}</td>
+      <td>{{p.id}}</td>
+      <td>{{p.name.firstname}}</td>
+      <td>{{p.name.lastname}}</td>
+      <td>{{p.username}}</td>
       <td>Commands</td>
     </tr>
   </table>
