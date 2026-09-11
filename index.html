@@ -7,13 +7,11 @@
   <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="/bootstrap.min.css">
   <link rel="stylesheet" href="/style.css">
-  <link rel="stylesheet" type="text/css"
-    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
-  <link rel="stylesheet" type="text/css"
-    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
-  <link rel="stylesheet" type="text/css"
-    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css" />
-
+  <!-- PHOSPHOR ICONS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css" />
+  <!-- TITLE -->
   <title>ANGULAR_JS_SPA</title>
   <!-- SCRIPTS -->
   <script src="/SCRIPTS/angular.js"></script>
@@ -33,13 +31,16 @@
 <body>
   <div class="container crm_container" ng-app="UsersApp">
     <div class="toast"></div>
-
+    <!-- SIDEBAR -->
     <aside class="sidebar">
+      <!-- LOGO -->
       <div class="logo">
         <img src="./favicon.png" width="35" alt="">
-        <h3> ANGULAR.JS CRM </h3>
+        <h3> ANGULAR.JS PANEL </h3>
       </div>
+      <!-- LINKS -->
       <div class="links">
+        <!-- USERS -->
         <a href="#!AllUsers" class="btn btn-info anchor">
           <i class="ph-fill ph-users"></i> ALL USERS
         </a>
@@ -51,6 +52,7 @@
           ADD USER
         </a>
         <div class="horizontal__separator"></div>
+        <!-- PRODUCTS -->
         <a href="#!AllProducts" class="btn btn-warning anchor">
           <i class="ph-fill ph-users"></i> ALL PRODUCTS
         </a>
@@ -61,11 +63,11 @@
           <i class="ph-fill ph-plus-circle"></i>
           ADD PRODUCT
         </a>
+        <div class="horizontal__separator"></div>
       </div>
-
     </aside>
 
-    <!--^ NG-VIEW -->
+    <!-- NG-VIEW -->
     <div ng-view></div>
   </div>
 

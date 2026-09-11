@@ -1,17 +1,14 @@
-var app = angular.module('UsersApp', ["ngRoute"]) // DEPENDENCIES => NG_ROUTE
+// DEPENDENCIES FOR MODULE => NG_ROUTE
+var app = angular.module('UsersApp', ["ngRoute"])
 
 // APP.FACTORY ==========================================================
 app.factory("SharedData", function () {
-  return {
-    value: 0,
-    isAdded: false,
-    people: [],
-  }
+  return { value: 0, }
 })
 
 // APP CONFIG | ROUTE_PROVIDER ===========================================================
 app.config(["$routeProvider", function ($routeProvider) {
-  // USERS
+  // USERS ROUTES
   $routeProvider.when("/", {
     templateUrl: "/AllUsers.html",
     controller: "AllPeopleController"
@@ -28,7 +25,7 @@ app.config(["$routeProvider", function ($routeProvider) {
     templateUrl: "/AddUser.html",
     controller: "AddPersonController"
   })
-  // PRODUCTS
+  // PRODUCTS ROUTES
   $routeProvider.when('/AllProducts', {
     templateUrl: '/AllProducts.html',
     controller: 'AllProductsController'
