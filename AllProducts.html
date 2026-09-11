@@ -1,4 +1,25 @@
 <section id="ALL_PRODUCTS_SECTION">
   <h2 class="all_h2"> <i class="ph-bold ph-package"></i> ALL PRODUCTS</h2>
   <div class="horizontal__separator"></div>
+
+  <div class="products__wrapper">
+    <div class="product__item" ng-repeat="p in products track by $index">
+      <img src="{{p.image}}" alt="">
+      <p>{{p.id}}.{{p.title.slice(0,25)}}</p>
+      <p class="badge rounded-pill">{{p.category}}</p>
+      <div class="horizontal__separator"></div>
+      <small>{{p.description.slice(0,90)}}</small>
+      <div class="stars">
+        <i class="ph-fill ph-star" ng-repeat="item in [1,2,3,4,5] track by $index" ng-if="$index < p.rating.rate">
+        </i>
+      </div>
+      <div class="horizontal__separator"></div>
+      <div class="price__and__button">
+        <p class="price">${{p.price}}</p>
+        <button class="btn btn-black">ADD TO CART</button>
+      </div>
+    </div>
+  </div>
+
+
 </section>
