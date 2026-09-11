@@ -22,8 +22,8 @@ app.config(["$routeProvider", function ($routeProvider) {
     controller: "AllPeopleController"
   })
 
-  $routeProvider.when("/SingleUser", {
-    templateUrl: "/SingleUser.html",
+  $routeProvider.when("/SearchUser", {
+    templateUrl: "/SearchUser.html",
     controller: "SingleUserController"
   })
 
