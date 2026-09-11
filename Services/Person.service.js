@@ -10,8 +10,7 @@ app.service('PersonService', function ($http, SharedData) {
   }
 
   this.addPerson = function (person) {
-    allUsers.push(person)
-    return allUsers
+    return $http.post(BASE_URL, person)
   }
 
   this.editPerson = function (id, person) {

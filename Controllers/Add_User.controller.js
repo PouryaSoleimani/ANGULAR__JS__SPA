@@ -8,7 +8,7 @@ app.controller('AddPersonController',
 `
     const validHTML = `
    <i class="ph-fill ph-check-fat success"></i>
-    <p>FORM SUBMITTED SUCCESSFULLY</p>
+    <p>USER ADDED SUCCESSFULLY</p>
     `
     const allInputs = document.querySelectorAll('input')
 
@@ -21,7 +21,8 @@ app.controller('AddPersonController',
       console.log(e)
       if (e.type == "click" || (e.type == "keydown" && e.key == 'Enter')) {
 
-        if (!$scope.firstname || !$scope.lastname || !$scope.age) {
+        // NOT VALID SITUATION
+        if (!$scope.username || !$scope.email || !$scope.password) {
           console.log('NOT VALID')
           allInputs.forEach(item => {
             if (!item.readOnly && item.value == '') {
@@ -37,28 +38,33 @@ app.controller('AddPersonController',
           }, 2000);
           return;
         }
-
         else {
           var person = {
             id: $scope.people.length + 1,
-            firstname: $scope.firstname,
-            lastname: $scope.lastname,
-            age: $scope.age,
+            username: $scope.username,
+            email: $scope.email,
+            password: $scope.password,
           }
+          PersonService.addPerson(person)
+            .then(function (res) {
+              console.log({ res })
+              $scope.people = res.data;
 
-          var newAllUsers = PersonService.addPerson(person)
-          SharedData.isAdded = true;
-          $scope.people = newAllUsers;
-          SharedData.people = newAllUsers;
-          $location.path('/')
+              allInputs.forEach(item => item.value = '')
+              toast.innerHTML = validHTML;
+              toast.classList.add('active')
 
-          allInputs.forEach(item => item.value = '')
-          toast.innerHTML = validHTML;
-          toast.classList.add('active')
-          setTimeout(() => {
-            toast.classList.remove('active')
-          }, 2000);
+              setTimeout(() => {
+                toast.classList.remove('active')
+              }, 1500);
 
+              $location.path('/AllUsers')
+
+
+            })
+            .catch(function (err) {
+              console.log(err)
+            })
         }
 
       }
