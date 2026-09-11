@@ -11,12 +11,13 @@
   </div>
 
   <!-- SINGLE USER CARD -->
-  <div ng-show="selectedProduct" class="single__user__card">
+  <div ng-show="selectedProduct" class="single__product__card">
     <div class="card__header">
       <i class="ph-bold ph-devices"></i>
       PRODUCT
     </div>
     <div class="card__body">
+      <img src="{{selectedProduct.image}}" alt="">
       <p>
         <i class="ph-fill ph-identification-card"></i>
         {{selectedProduct.title.slice(0,30)}}
