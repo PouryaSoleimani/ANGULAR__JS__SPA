@@ -41,23 +41,19 @@
         <div class="modal__body">
           <div class="input-group mb-3">
             <span class="input-group-text" id="basic-addon1">ID</span>
-            <input readonly type="text" class="form-control" ng-value="vm.selectedUser.id" placeholder="id"
-              aria-label="Username">
+            <input readonly type="text" class="form-control" ng-value="vm.selectedUser.id" placeholder="id">
           </div>
           <div class="input-group mb-3">
             <span class="input-group-text" id="username">FIRSTNAME</span>
-            <input type="text" class="form-control" ng-value="vm.selectedUser.firstname" placeholder="Username"
-              aria-label="Username">
+            <input type="text" class="form-control" ng-value="vm.selectedUser.name.firstname" placeholder="Firstname">
           </div>
           <div class="input-group mb-3">
             <span class="input-group-text" id="username">LASTNAME</span>
-            <input type="text" class="form-control" placeholder="Username" ng-value="vm.selectedUser.lastname"
-              aria-label="Username">
+            <input type="text" class="form-control" placeholder="Lastname" ng-value="vm.selectedUser.name.lastname">
           </div>
           <div class="input-group mb-3">
-            <span class="input-group-text" id="username">AGE</span>
-            <input type="text" class="form-control" placeholder="Username" ng-value="vm.selectedUser.age"
-              aria-label="Username">
+            <span class="input-group-text" id="username">E-MAIL</span>
+            <input type="text" class="form-control" placeholder="Username" ng-value="vm.selectedUser.email">
           </div>
 
           <button class="btn btn-success" ng-click="submitEditFormHandler()">SUBMIT</button>
