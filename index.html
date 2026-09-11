@@ -26,25 +26,28 @@
 </head>
 
 <body>
-  <div class="container" ng-app="UsersApp">
-    <div class="input__wrapper">
-      <h1>MANAGE PEOPLE</h1>
-    </div>
+  <div class="container crm_container" ng-app="UsersApp">
+    <div class="toast"></div>
 
-    <div class="tags">
-      <a href="#!AllUsers" class="btn btn-info anchor">
-        <i class="ph-fill ph-users"></i> ALL USERS
-      </a>
-      <a href="#!SingleUser" class="btn btn-primary anchor">
-        <i class="ph-bold ph-magnifying-glass"></i> SEARCH
-      </a>
-      <a href="#!AddNewPerson" class="btn btn-success anchor">
-        <i class="ph-fill ph-plus-circle"></i>
-        ADD USER
-      </a>
-    </div>
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="./favicon.png" width="35" alt="">
+        ANGULAR.JS CRM
+      </div>
+      <div class="links">
+        <a href="#!AllUsers" class="btn btn-info anchor">
+          <i class="ph-fill ph-users"></i> ALL USERS
+        </a>
+        <a href="#!SingleUser" class="btn btn-primary anchor">
+          <i class="ph-bold ph-magnifying-glass"></i> SEARCH USERS
+        </a>
+        <a href="#!AddNewPerson" class="btn btn-success anchor">
+          <i class="ph-fill ph-plus-circle"></i>
+          ADD USER
+        </a>
+      </div>
 
-    <div class="toast">HELLO</div>
+    </aside>
 
     <!--^ NG-VIEW -->
     <div ng-view></div>

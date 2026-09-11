@@ -671,3 +671,40 @@ section {
 .input-group-text {
   margin-bottom: 4px;
 }
+
+.sidebar {
+  height: 100%;
+  position: fixed;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: white;
+  width: 300px;
+  box-shadow: 4px 4px 10px rgba(157, 156, 156, 0.53);
+}
+
+.logo {
+  padding-bottom: 24px;
+  border-bottom: 4px solid var(--border);
+  padding: 12px;
+}
+
+.links {
+  display: grid;
+  gap: 12px;
+  padding: 12px;
+}
+
+.crm_container {
+  min-width: calc(100% - 350px);
+  max-width: calc(100% - 350px);
+  position: absolute;
+  right: 0;
+  height: 100%;
+  max-height: calc(100% - 24px);
+  margin: 12px 24px;
+  border-radius: 8px;
+}

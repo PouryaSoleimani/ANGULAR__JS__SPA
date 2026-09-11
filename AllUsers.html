@@ -1,5 +1,5 @@
 <section id="ALL_PEOPLE_SECTION">
-  <h2 class="all_h2">ALL PEOPLE</h2>
+  <h2 class="all_h2">ALL USERS</h2>
   <div class="loading__div" ng-show="!people">LOADING</div>
 
   <div class="no__users" ng-show="people && !people.length">USERS LIST IS EMPTY</div>
@@ -16,7 +16,7 @@
     <!-- TABLE__BODY | NG_REPEAT -->
     <div class="table__body">
       <div class="table__row" ng-repeat="p in people track by $index">
-        <p>{{p.id}}</p>
+        <p class="col-span-1">{{p.id}}</p>
         <p>{{p.name.firstname}}</p>
         <p>{{p.name.lastname}}</p>
         <p>{{p.email}}</p>
@@ -55,7 +55,6 @@
             <span class="input-group-text" id="username">E-MAIL</span>
             <input type="text" class="form-control" placeholder="Username" ng-value="vm.selectedUser.email">
           </div>
-
           <button class="btn btn-success" ng-click="submitEditFormHandler()">SUBMIT</button>
         </div>
       </div>
