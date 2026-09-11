@@ -1,0 +1,40 @@
+<section id="SINGLE_USER_SECTION">
+  <h2> <i class="ph-bold ph-magnifying-glass"></i> SEARCH PRODUCT</h2>
+  <div class="horizontal__separator"></div>
+  <input type="text" ng-model="productID" ng-change="productSearchHandler()" class="search__input"
+    placeholder="Enter User ID to Search">
+
+  <!-- NOT FOUND FALLBACK -->
+  <div ng-hide="selectedProduct" class="no__users">
+    <i class="ph-fill ph-seal-warning"></i>
+    NO PRODUCT WERE FOUND
+  </div>
+
+  <!-- SINGLE USER CARD -->
+  <div ng-show="selectedProduct" class="single__user__card">
+    <div class="card__header">
+      <i class="ph-bold ph-devices"></i>
+      PRODUCT
+    </div>
+    <div class="card__body">
+      <p>
+        <i class="ph-fill ph-identification-card"></i>
+        {{selectedProduct.title.slice(0,30)}}
+      </p>
+      <p>
+        <i class="ph-bold ph-text-indent"></i>
+        {{selectedProduct.description.slice(0,35)}}
+      </p>
+      <p>
+        <i class="ph-bold ph-currency-dollar-simple -translate-y-2 "></i>
+        ${{selectedProduct.price.toLocaleString()}}
+      </p>
+      <p>
+        <i class="ph-bold ph-list"></i>
+        {{selectedProduct.category}}
+      </p>
+    </div>
+
+  </div>
+
+</section>

@@ -807,3 +807,7 @@ section {
     justify-content: space-between;
   }
 }
+
+.-translate-y-2 {
+  transform: translateY(-2px);
+}

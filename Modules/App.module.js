@@ -33,4 +33,8 @@ app.config(["$routeProvider", function ($routeProvider) {
     templateUrl: '/AllProducts.html',
     controller: 'AllProductsController'
   })
+  $routeProvider.when('/SearchProduct', {
+    templateUrl: '/SearchProduct.html',
+    controller: "SearchProductController"
+  })
 }])

@@ -7,6 +7,5 @@ app.controller('AllProductsController', function ($scope, ProductService) {
     return res
   })
 
-  
-
+ 
 })
