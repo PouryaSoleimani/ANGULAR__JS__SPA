@@ -11,15 +11,17 @@
     href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
   <link rel="stylesheet" type="text/css"
     href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css" />
   <title>ANGULAR_JS_SPA</title>
   <!-- SCRIPTS -->
   <script src="/SCRIPTS/angular.js"></script>
   <script src="/SCRIPTS/angular-route.js"></script>
-  <script src="/Models/MainModel.js"></script>
+  <script src="/Modules/App.module.js"></script>
   <script src="/Services/main.service.js"></script>
-  <script src="/Controllers/AllUsersController.js"></script>
-  <script src="/Controllers/AddPersonController.js"></script>
-  <script src="/Controllers/SingleUserController.js"></script>
+  <script src="/Controllers/All_Users.controller.js"></script>
+  <script src="/Controllers/Add_User.controller.js"></script>
+  <script src="/Controllers/Single_User.controller.js"></script>
 </head>
 
 <body>
@@ -29,11 +31,20 @@
     </div>
 
     <div class="tags">
-      <a href="#!AllUsers" class="btn btn-info">ALL USERS</a>
-      <a href="#!SingleUser" class="btn btn-primary">SINGLE USER</a>
-      <a href="#!EditPerson" class="btn btn-warning">EDIT USER</a>
-      <a href="#!AddNewPerson" class="btn btn-success">Add USER</a>
-      <a href="#!AddNewPerson" class="btn btn-danger">DELETE USER</a>
+      <a href="#!AllUsers" class="btn btn-info anchor">
+        <i class="ph-fill ph-users"></i> ALL USERS
+      </a>
+      <a href="#!SingleUser" class="btn btn-primary anchor">
+        <i class="ph-bold ph-magnifying-glass"></i> SEARCH USER
+      </a>
+      <a href="#!AddNewPerson" class="btn btn-success anchor">
+        <i class="ph-fill ph-plus-circle"></i>
+        ADD USER
+      </a>
+      <a href="#!EditPerson" class="btn btn-warning anchor">
+        <i class="ph-fill ph-pencil-simple"></i>
+        EDIT USER
+      </a>
     </div>
 
     <!--^ NG-VIEW -->
