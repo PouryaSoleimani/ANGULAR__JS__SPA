@@ -1,4 +1,5 @@
 app.controller('SingleUserController', function ($scope, PersonService) {
+
   // GET ALL USERS
   var list = PersonService.getAllPerson()
   list.then(function (result) {
@@ -11,4 +12,5 @@ app.controller('SingleUserController', function ($scope, PersonService) {
     console.log("ID =>", $scope.ID)
     console.log("USER =>", $scope.user)
   }
+
 })
