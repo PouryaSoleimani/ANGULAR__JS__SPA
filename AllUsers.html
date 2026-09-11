@@ -24,10 +24,43 @@
           <button class="btn md btn-danger" ng-click="userDeleteHandler(p.id)">
             <i class="ph-fill ph-trash-simple"></i>
           </button>
-          <button class="btn md">
+          <button ng-click="openModalHandler(p)" class="btn md">
             <i class="ph-fill ph-pen"></i>
           </button>
         </p>
+      </div>
+    </div>
+
+    <div class="modal edit_person_modal">
+      <div class="modal__content">
+        <div class="modal__header">
+          <h3>EDIT USER</h3>
+          <button class="btn btn-danger" ng-click="closeModalHandler(this)"><i class="ph-bold ph-x"></i></button>
+        </div>
+        <div class="modal__body">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">ID</span>
+            <input readonly type="text" class="form-control" ng-value="vm.selectedUser.id" placeholder="id"
+              aria-label="Username">
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="username">FIRSTNAME</span>
+            <input type="text" class="form-control" ng-value="vm.selectedUser.name.firstname" placeholder="Username"
+              aria-label="Username">
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="username">LASTNAME</span>
+            <input type="text" class="form-control" placeholder="Username" ng-value="vm.selectedUser.name.lastname"
+              aria-label="Username">
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="username">LASTNAME</span>
+            <input type="text" class="form-control" placeholder="Username" ng-value="vm.selectedUser.username"
+              aria-label="Username">
+          </div>
+
+          <button class="btn btn-success" ng-click="submitEditFormHandler()">SUBMIT</button>
+        </div>
       </div>
     </div>
 
