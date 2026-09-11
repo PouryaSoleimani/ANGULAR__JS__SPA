@@ -1,7 +1,6 @@
 app.controller('AddPersonController',
 
   function ($scope, $location, PersonService, SharedData) {
-    const people = SharedData.people
     const toast = document.querySelector('.toast')
     const notValidHTML = `
     <i class="ph-fill ph-warning error"></i>
@@ -13,18 +12,16 @@ app.controller('AddPersonController',
     `
     const allInputs = document.querySelectorAll('input')
 
-    var list = PersonService.getAllPerson()
-    list.then(function (result) {
-      console.log('%c ALL USERS =>', "color:yellow", result.data)
-      SharedData.people = result.data
-      $scope.people = result.data;
-    })
+    var list = PersonService.getAllPeople()
+    SharedData.people = list
+    $scope.people = list;
+    console.log('%c ALL USERS =>', "color:yellow", $scope.people)
 
     $scope.save = function (e) {
       console.log(e)
       if (e.type == "click" || (e.type == "keydown" && e.key == 'Enter')) {
 
-        if (!$scope.Name || !$scope.Family || !$scope.Age) {
+        if (!$scope.firstname || !$scope.lastname || !$scope.age) {
           console.log('NOT VALID')
           allInputs.forEach(item => {
             if (!item.readOnly && item.value == '') {
@@ -40,15 +37,20 @@ app.controller('AddPersonController',
           }, 2000);
           return;
         }
+
         else {
-          console.log({ people })
           var person = {
-            ID: SharedData.people.length + 1,
-            ID: 1,
-            Name: $scope.Name,
-            Family: $scope.Family,
-            Age: $scope.Age,
+            id: $scope.people.length + 1,
+            firstname: $scope.firstname,
+            lastname: $scope.lastname,
+            age: $scope.age,
           }
+
+          var newAllUsers = PersonService.addPerson(person)
+          SharedData.isAdded = true;
+          $scope.people = newAllUsers;
+          SharedData.people = newAllUsers;
+          $location.path('/')
 
           allInputs.forEach(item => item.value = '')
           toast.innerHTML = validHTML;
@@ -56,14 +58,6 @@ app.controller('AddPersonController',
           setTimeout(() => {
             toast.classList.remove('active')
           }, 2000);
-
-          console.log({ person })
-          var result = PersonService.addPerson(person)
-          result.then(function () {
-            SharedData.people.push(person)
-            $scope.people.push(person)
-            $location.path('/')
-          })
 
         }
 

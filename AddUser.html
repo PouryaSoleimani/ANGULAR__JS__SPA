@@ -5,15 +5,15 @@
     <input readonly type="text" class="form-control" ng-value="vm.selectedUser.id" placeholder="id">
 
     <span class="input-group-text" id="username">FIRSTNAME</span>
-    <input type="text" class="form-control" ng-model="Name" ng-value="vm.selectedUser.name.firstname"
+    <input type="text" class="form-control" ng-model="firstname" ng-value="vm.selectedUser.name.firstname"
       placeholder="Username">
 
     <span class="input-group-text" id="username">LASTNAME</span>
-    <input type="text" class="form-control" ng-model="Family" placeholder="Username"
+    <input type="text" class="form-control" ng-model="lastname" placeholder="Username"
       ng-value="vm.selectedUser.name.lastname">
 
-    <span class="input-group-text" id="username">LASTNAME</span>
-    <input type="text" ng-model="Age" class="form-control" placeholder="Username" ng-value="vm.selectedUser.username">
+    <span class="input-group-text" id="username">AGE</span>
+    <input type="text" ng-model="age" class="form-control" placeholder="Username" ng-value="vm.selectedUser.username">
   </div>
 
   <button class="btn btn-success" ng-click="save($event)">

@@ -2,7 +2,11 @@ var app = angular.module('UsersApp', ["ngRoute"]) // DEPENDENCIES => NG_ROUTE
 
 // APP.FACTORY ==========================================================
 app.factory("SharedData", function () {
-  return { value: 0 }
+  return {
+    value: 0,
+    isAdded: false,
+    people: []
+  }
 })
 
 // APP CONFIG | ROUTE_PROVIDER ===========================================================

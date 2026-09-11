@@ -1,11 +1,17 @@
-app.service('PersonService', function ($http) {
+app.service('PersonService', function ($http, SharedData) {
   const BASE_URL = 'https://fakestoreapi.com/users'
+
   const allUsers = [
     { id: 1, firstname: 'MAMAD', lastname: 'YOUSEFI', age: 24 }
-  ]
+  ];
 
   this.getAllPeople = function () {
-    return allUsers;
+    console.log({ shared: SharedData, allusers: allUsers })
+    if (SharedData.isAdded) {
+      return SharedData.people;
+    } else {
+      return allUsers;
+    }
   }
 
   this.getPersonById = function (ID) {
@@ -13,12 +19,8 @@ app.service('PersonService', function ($http) {
   }
 
   this.addPerson = function (person) {
-    var result = $http({
-      url: `${BASE_URL}`,
-      method: 'POST',
-      data: person
-    })
-    return result;
+    allUsers.push(person)
+    return allUsers
   }
 
   this.editPerson = function (id, person) {
