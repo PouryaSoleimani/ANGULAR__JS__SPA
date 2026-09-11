@@ -474,21 +474,54 @@ section {
 .single__user__card {
   outline: 3px solid #00000030;
   border-radius: 12px;
-  padding: 12px;
-  width: 300px;
-  height: 200px;
+  width: 500px;
+  height: auto;
   margin: 24px auto;
   box-shadow: 3px 4px 12px #00000050;
   background-color: var(--background);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-size: 24px;
+  align-items: start;
+  justify-content: start;
+  gap: 0;
+  font-size: 18px;
+
+  .card__header {
+    background-color: var(--destructive);
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .card__body {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 12px;
+    width: 100%;
+
+    p {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding-block: 6px;
+      border-bottom: 1px solid var(--border);
+      width: 100%;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
 
   i {
-    font-size: 32px;
+    font-size: 24px;
   }
 }
 
