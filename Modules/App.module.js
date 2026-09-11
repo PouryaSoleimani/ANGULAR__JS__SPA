@@ -23,14 +23,9 @@ app.config(["$routeProvider", function ($routeProvider) {
     controller: "SingleUserController"
   })
 
-  // $routeProvider.when("/AddNewPerson", {
-  //   templateUrl: "/addPerson.html",
-  //   controller: "AddPersonController"
-  // })
-
-  // $routeProvider.when("/EditPerson", {
-  //   templateUrl: "/editPerson.html",
-  //   controller: "EditPersonController"
-  // })
+  $routeProvider.when("/AddNewPerson", {
+    templateUrl: "/AddUser.html",
+    controller: "AddPersonController"
+  })
 
 }])
