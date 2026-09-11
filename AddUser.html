@@ -1,25 +1,23 @@
 <section class="add_user_section">
   <h2> <i class="ph-bold ph-plus"></i> ADD USER</h3>
-  <div class="horizontal__separator"></div>
+    <div class="horizontal__separator"></div>
 
-  <div ng-keydown="$event.key == 'Enter' && save($event)" class="input-group mb-3">
-    <span class="input-group-text">ID</span>
-    <input readonly type="text" class="form-control" ng-value="vm.selectedUser.id" placeholder="id">
+    <div ng-keydown="$event.key == 'Enter' && save($event)" class="input-group mb-3">
+      <span class="input-group-text">ID</span>
+      <input readonly type="text" class="form-control" ng-value="vm.selectedUser.id" placeholder="id">
 
-    <span class="input-group-text" id="username">USERNAME</span>
-    <input type="text" class="form-control" ng-model="username" ng-value="vm.selectedUser.name.username"
-      placeholder="Username">
+      <span class="input-group-text" id="username">USERNAME</span>
+      <input type="text" class="form-control" ng-model="username" ng-value="vm.selectedUser.name.username" placeholder="Username">
 
-    <span class="input-group-text" id="username">E-MAIl</span>
-    <input type="text" class="form-control" ng-model="email" placeholder="Username" ng-value="vm.selectedUser.email">
+      <span class="input-group-text" id="username">E-MAIl</span>
+      <input type="text" class="form-control" ng-model="email" placeholder="Username" ng-value="vm.selectedUser.email">
 
-    <span class="input-group-text" id="username">PASSWORD</span>
-    <input type="password" ng-model="password" class="form-control" placeholder="Username"
-      ng-value="vm.selectedUser.password">
-  </div>
+      <span class="input-group-text" id="username">PASSWORD</span>
+      <input type="password" ng-model="password" class="form-control" placeholder="Username" ng-value="vm.selectedUser.password">
+    </div>
 
-  <button class="btn btn-success" ng-click="save($event)">
-    <i class="ph-bold ph-plus"></i>
-    ADD USER
-  </button>
+    <button class="btn btn-success" ng-click="save($event)">
+      <i class="ph-bold ph-plus"></i>
+      ADD USER
+    </button>
 </section>

@@ -1,13 +1,13 @@
 <section id="SINGLE_USER_SECTION">
   <h2> <i class="ph-bold ph-magnifying-glass"></i> SEARCH USER</h2>
   <div class="horizontal__separator"></div>
-  <input type="text" ng-model="ID" ng-change="searchHandler()" class="search__input"
-    placeholder="Enter User ID to Search">
+
+  <input type="text" ng-model="ID" ng-change="searchHandler()" class="search__input form-control" placeholder="Enter User ID to Search">
 
   <!-- NOT FOUND FALLBACK -->
   <div ng-hide="user" class="no__users">
     <i class="ph-fill ph-seal-warning"></i>
-    NO USER WERE FOUND
+    <h3> NO USER WERE FOUND </h3>
   </div>
 
   <!-- SINGLE USER CARD -->

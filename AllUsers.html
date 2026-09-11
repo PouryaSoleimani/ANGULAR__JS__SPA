@@ -1,7 +1,9 @@
 <section id="ALL_PEOPLE_SECTION">
+
   <h2 class="all_h2"> <i class="ph-bold ph-users"></i> ALL USERS</h2>
   <div class="horizontal__separator"></div>
-  <div class="loading__div" ng-show="!people">LOADING</div>
+
+  <div class="loading__div" ng-show="!people">LOADING ...</div>
 
   <div class="no__users" ng-show="people && !people.length">USERS LIST IS EMPTY</div>
 
@@ -17,7 +19,7 @@
     <!-- TABLE__BODY | NG_REPEAT -->
     <div class="table__body">
       <div class="table__row" ng-repeat="p in people track by $index">
-        <p class="col-span-1">{{p.id}}</p>
+        <p>{{p.id}}</p>
         <p>{{p.name.firstname}}</p>
         <p>{{p.name.lastname}}</p>
         <p>{{p.email}}</p>

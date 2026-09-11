@@ -7,8 +7,8 @@ app.controller('AddPersonController',
     <p>FORM IS NOT VALID</p>
     `
     const validHTML = `
-   <i class="ph-fill ph-check-fat success"></i>
-    <p>USER ADDED SUCCESSFULLY</p>
+     <i class="ph-fill ph-check-fat success"></i>
+      <p>USER ADDED SUCCESSFULLY</p>
     `
     const allInputs = document.querySelectorAll('input')
 
@@ -36,6 +36,7 @@ app.controller('AddPersonController',
             toast.classList.remove('active')
             allInputs.forEach(item => item.classList.remove('error'))
           }, 2000);
+          
           return;
         }
         else {
@@ -59,7 +60,6 @@ app.controller('AddPersonController',
               }, 1500);
 
               $location.path('/AllUsers')
-
 
             })
             .catch(function (err) {
