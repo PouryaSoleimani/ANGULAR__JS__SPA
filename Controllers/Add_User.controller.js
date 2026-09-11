@@ -5,7 +5,7 @@ app.controller('AddPersonController',
     const notValidHTML = `
     <i class="ph-fill ph-warning error"></i>
     <p>FORM IS NOT VALID</p>
-`
+    `
     const validHTML = `
    <i class="ph-fill ph-check-fat success"></i>
     <p>USER ADDED SUCCESSFULLY</p>
