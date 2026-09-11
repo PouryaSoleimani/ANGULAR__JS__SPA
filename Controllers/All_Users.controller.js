@@ -4,11 +4,10 @@ app.controller('AllPeopleController',
       editModal: document.querySelector('.edit_person_modal'),
       selectedUser: {}
     }
-    var list = PersonService.getAllPerson()
-    list.then(function (result) {
-      console.log('%c ALL USERS =>', "color:yellow", result.data)
-      $scope.people = result.data;
-    })
+
+    var list = PersonService.getAllPeople()
+    $scope.people = list
+
 
     $scope.userDeleteHandler = function (ID) {
       console.log({ ID })
