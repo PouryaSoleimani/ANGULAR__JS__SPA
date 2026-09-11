@@ -6,8 +6,10 @@ app.controller('AllPeopleController',
     }
 
     var list = PersonService.getAllPeople()
-    $scope.people = list
-
+    list.then(res => {
+      console.log('result =>', res.data)
+      $scope.people = res.data;
+    })
 
     $scope.userDeleteHandler = function (ID) {
       console.log({ ID })

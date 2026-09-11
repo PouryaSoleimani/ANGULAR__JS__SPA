@@ -10,16 +10,16 @@
       <p>ID</p>
       <p>Name</p>
       <p>Family</p>
-      <p>Age</p>
+      <p>E-MAIL</p>
       <p>Actions</p>
     </div>
     <!-- TABLE__BODY | NG_REPEAT -->
     <div class="table__body">
       <div class="table__row" ng-repeat="p in people track by $index">
         <p>{{p.id}}</p>
-        <p>{{p.firstname}}</p>
-        <p>{{p.lastname}}</p>
-        <p>{{p.age}}</p>
+        <p>{{p.name.firstname}}</p>
+        <p>{{p.name.lastname}}</p>
+        <p>{{p.email}}</p>
         <p class="buttons">
           <button class="btn md btn-danger" ng-click="userDeleteHandler(p.id)">
             <i class="ph-fill ph-trash-simple"></i>
@@ -31,6 +31,7 @@
       </div>
     </div>
 
+    <!--//^ MODAL -->
     <div class="modal edit_person_modal">
       <div class="modal__content">
         <div class="modal__header">
