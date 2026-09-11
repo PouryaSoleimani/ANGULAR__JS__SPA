@@ -5,31 +5,32 @@ app.factory("SharedData", function () {
   return {
     value: 0,
     isAdded: false,
-    people: []
+    people: [],
   }
 })
 
 // APP CONFIG | ROUTE_PROVIDER ===========================================================
 app.config(["$routeProvider", function ($routeProvider) {
-
+  // USERS
   $routeProvider.when("/", {
     templateUrl: "/AllUsers.html",
     controller: "AllPeopleController"
   })
-
   $routeProvider.when("/AllUsers", {
     templateUrl: "/AllUsers.html",
     controller: "AllPeopleController"
   })
-
   $routeProvider.when("/SearchUser", {
     templateUrl: "/SearchUser.html",
     controller: "SingleUserController"
   })
-
   $routeProvider.when("/AddNewPerson", {
     templateUrl: "/AddUser.html",
     controller: "AddPersonController"
   })
-
+  // PRODUCTS
+  $routeProvider.when('/AllProducts', {
+    templateUrl: '/AllProducts.html',
+    controller: 'AllProductsController'
+  })
 }])
