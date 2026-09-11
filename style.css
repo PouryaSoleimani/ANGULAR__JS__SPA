@@ -570,3 +570,26 @@ section {
     font-size: 24px;
   }
 }
+
+.add_user_section {
+  display: grid;
+  padding: 16px;
+  gap: 12px;
+
+  .form-control {
+    width: 97%;
+  }
+
+  button {
+    margin-top: 24px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+
+    &:active {
+      scale: 0.99;
+    }
+  }
+}

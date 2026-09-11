@@ -4,7 +4,7 @@ app.controller('AddPersonController',
     $scope.ID = 0
     $scope.save = function () {
       var person = {
-        ID: $scope.ID,
+        ID: Number($scope.people.length) + 1,
         Name: $scope.Name,
         Family: $scope.Family,
         Age: $scope.Age,

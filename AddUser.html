@@ -1,3 +1,27 @@
-<section>
-  <h2> ADD USER </h2>
+<section class="add_user_section">
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">ID</span>
+    <input readonly type="text" class="form-control" ng-value="vm.selectedUser.id" placeholder="id"
+      aria-label="Username">
+  </div>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="username">FIRSTNAME</span>
+    <input type="text" class="form-control" ng-value="vm.selectedUser.name.firstname" placeholder="Username"
+      aria-label="Username">
+  </div>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="username">LASTNAME</span>
+    <input type="text" class="form-control" placeholder="Username" ng-value="vm.selectedUser.name.lastname"
+      aria-label="Username">
+  </div>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="username">LASTNAME</span>
+    <input type="text" class="form-control" placeholder="Username" ng-value="vm.selectedUser.username"
+      aria-label="Username">
+  </div>
+
+  <button class="btn btn-success" ng-click="save()">
+    <i class="ph-bold ph-plus"></i>
+    ADD USER
+  </button>
 </section>
