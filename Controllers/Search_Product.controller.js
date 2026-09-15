@@ -11,3 +11,4 @@ app.controller("SearchProductController", function ($scope, ProductService) {
     );
   };
 });
+
