@@ -36,7 +36,7 @@ app.controller('AddPersonController',
             toast.classList.remove('active')
             allInputs.forEach(item => item.classList.remove('error'))
           }, 2000);
-          
+
           return;
         }
         else {
