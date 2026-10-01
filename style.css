@@ -665,7 +665,6 @@ section {
   .form-control {
     width: 97%;
     margin-inline: auto;
-
   }
 
   button {
@@ -800,7 +799,6 @@ section {
   }
 
   .price__and__button {
-
     .price {
       font-weight: bold;
       font-size: 24px;
