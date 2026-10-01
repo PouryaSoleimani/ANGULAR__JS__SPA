@@ -34,5 +34,9 @@ app.config(["$routeProvider", function ($routeProvider) {
     templateUrl: "/SearchProduct.html",
     controller: "SearchProductController",
   });
+  $routeProvider.when('/TestPage', {
+    templateUrl: '/TestPage.html',
+    controller: 'TestPageController'
+  })
 },
 ]);
