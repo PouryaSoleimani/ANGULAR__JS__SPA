@@ -1,4 +1,5 @@
-app.controller('TestPageController', function ($scope) {
-  $scope.vm = {}
-  
-})
+app.controller('TestPageController',
+  function ($scope) {
+    $scope.vm = {}
+
+  })

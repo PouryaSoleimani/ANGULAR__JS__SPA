@@ -1,5 +1,4 @@
 app.controller('AddPersonController',
-
   function ($scope, $location, PersonService, SharedData) {
     const toast = document.querySelector('.toast')
     const notValidHTML = `
