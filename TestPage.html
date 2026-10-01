@@ -2,4 +2,10 @@
   <div ng-repeat="person in vm.people track by $index">
     {{ person | uppercase }}
   </div>
+  <br>
+  <hr>
+  <br>
+  <div ng-repeat="price in vm.prices track by $index">
+    {{ price | currency }}
+  </div>
 </div>
