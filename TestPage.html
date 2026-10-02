@@ -3,14 +3,13 @@
   <div ng-repeat="person in vm.people track by $index">
     {{ person | uppercase }}
   </div>
-  <br>
-  <hr>
-  <br>
+  <separator></separator>
   <div ng-repeat="price in vm.prices track by $index">
     {{ price | currency }}
   </div>
-  <br>
-  <hr>
-  <br>
+  <separator></separator>
+  <input type="text" placeholder="search" ng-model="searchExpression">
+  {{searchExpression}}
+  <separator></separator>
   <superman />
 </div>

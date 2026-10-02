@@ -8,6 +8,13 @@ app.controller('TestPageController',
   })
 
 // DIRECTIVES
+app.directive('separator', function () {
+  return {
+    restrict: 'E',
+    template: "<div class='separator'></div>"
+  }
+})
+
 app.directive('superman', function () {
   return {
     restrict: 'E',
