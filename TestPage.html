@@ -1,4 +1,5 @@
 <div>
+  <!-- FILTERS -->
   <div ng-repeat="person in vm.people track by $index">
     {{ person | uppercase }}
   </div>
@@ -8,4 +9,6 @@
   <div ng-repeat="price in vm.prices track by $index">
     {{ price | currency }}
   </div>
+
+
 </div>
