@@ -873,3 +873,10 @@ section {
   height: 1px;
   border-bottom: 1px dashed var(--border);
 }
+
+.space {
+  width: 100%;
+  display: block;
+  height: 2px;
+  margin-block: 6px;
+}

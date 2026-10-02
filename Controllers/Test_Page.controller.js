@@ -21,3 +21,44 @@ app.directive('superman', function () {
     template: "<div>HERE I AM SUPERMAN</div>"
   }
 })
+
+app.directive('space', function () {
+  return {
+    restrict: 'E',
+    template: "<div class='space'></div>"
+  }
+})
+
+app.directive('buttoncomponent', function () {
+  return {
+    restrict: 'E', // EXPRESSION
+    template: "<button class='btn btn-black'>CLICK ME !</button>"
+  }
+})
+
+app.directive('logger', function () {
+  return {
+    restrict: 'A', // ANCHOR
+    link: function () {
+      console.log('LINK | DIRECTIVE')
+    }
+  }
+})
+
+app.directive('loggerClass', function () {
+  return {
+    restrict: 'C', // CLASS
+    link: function () {
+      console.log('CLASS | DIRECTIVE')
+    }
+  }
+})
+
+app.directive('loggerComment', function () {
+  return {
+    restrict: 'M', // CLASS
+    link: function () {
+      console.log('COMMENT | DIRECTIVE')
+    }
+  }
+})
