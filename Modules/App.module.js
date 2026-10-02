@@ -38,5 +38,9 @@ app.config(["$routeProvider", function ($routeProvider) {
     templateUrl: '/TestPage.html',
     controller: 'TestPageController',
   })
+  $routeProvider.when('/ArtistsPage', {
+    templateUrl: '/Artists.html',
+    controller: 'ArtistsController',
+  })
 },
 ]);  
