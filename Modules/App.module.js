@@ -36,7 +36,7 @@ app.config(["$routeProvider", function ($routeProvider) {
   });
   $routeProvider.when('/TestPage', {
     templateUrl: '/TestPage.html',
-    controller: 'TestPageController'
+    controller: 'TestPageController',
   })
 },
 ]);  

@@ -1,4 +1,4 @@
-<div>
+<div ng-app="superhero" ng-controller="TestPageController">
   <!-- FILTERS -->
   <div ng-repeat="person in vm.people track by $index">
     {{ person | uppercase }}
@@ -9,6 +9,8 @@
   <div ng-repeat="price in vm.prices track by $index">
     {{ price | currency }}
   </div>
-
-
+  <br>
+  <hr>
+  <br>
+  <superman />
 </div>
