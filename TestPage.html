@@ -1,15 +1,19 @@
 <div ng-app="superhero" ng-controller="TestPageController">
-  <!-- FILTERS -->
-  <div ng-repeat="person in vm.people track by $index">
+  <!-- FRIENDS -->
+  <input type="text" placeholder="Search Friends" ng-model="searchExpression">
+  {{searchExpression}}
+  <separator></separator>
+  <h3>FRIENDS LIST: </h3>
+  <div ng-repeat="person in vm.people | filter:searchExpression:strict">
     {{ person | uppercase }}
   </div>
+  <!-- PRICES -->
   <separator></separator>
   <div ng-repeat="price in vm.prices track by $index">
     {{ price | currency }}
   </div>
   <separator></separator>
-  <input type="text" placeholder="search" ng-model="searchExpression">
-  {{searchExpression}}
+
   <separator></separator>
   <superman />
 </div>
