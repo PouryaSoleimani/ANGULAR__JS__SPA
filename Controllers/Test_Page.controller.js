@@ -1,11 +1,16 @@
 //^ TEST PAGE CONTROLLER
-app.controller('TestPageController',
-  function ($scope) {
+app.controller('TestPageController', ['$scope', '$http',
+  function ($scope, $http) {
     $scope.vm = {
       people: ["mamad", 'majid', 'mahyar', 'ehsan', 'nima', 'milad'],
-      prices: [123124, 2412421, 515125, 123123, 51512, 1412412]
+      prices: [123124, 2412421, 515125, 123123, 51512, 1412412],
+      mySelf: {}
     }
-  })
+    $http.get('/data.json').then(function (data) {
+      console.log('data =>', data)
+      $scope.vm.mySelf = data.data[0];
+    })
+  }])
 
 // DIRECTIVES
 app.directive('separator', function () {
@@ -61,4 +66,4 @@ app.directive('loggerComment', function () {
       console.log('COMMENT | DIRECTIVE')
     }
   }
-})
+}) 
