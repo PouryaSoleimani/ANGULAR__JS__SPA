@@ -4,7 +4,6 @@ app.controller('TestPageController', ['$scope', '$http',
     $scope.vm = {
       people: ["mamad", 'majid', 'mahyar', 'ehsan', 'nima', 'milad'],
       prices: [123124, 2412421, 515125, 123123, 51512, 1412412],
-      mySelf: {}
     }
     $http.get('/data.json').then(function (data) {
       console.log('data =>', data)
