@@ -18,13 +18,16 @@
   <separator></separator>
   <div>{{ vm.mySelf.name | uppercase }} : {{ vm.mySelf.age }} Years Old.</div>
   <separator></separator>
+
   <div class="inputs_wrapper">
     <input class="search_input" type="text" placeholder="Search Users" ng-model="searchExpression" />
+
     <select name="order" id="order" ng-model="orderExpression">
       <option value="">Order By</option>
       <option value="id">ID</option>
       <option value="name">NAME</option>
     </select>
+
     <div class="radios_wrapper">
       <div class="form_group">
         <label for="sort">Ascending</label>
@@ -35,9 +38,11 @@
         <input type="radio" name="sort" id="reverse" ng-model="sortExpression" value="reverse" />
       </div>
     </div>
+
     <space></space>
     <space></space>
   </div>
+
   <div class="users_container">
     <div
       class="user_box"
