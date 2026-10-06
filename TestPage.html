@@ -19,7 +19,7 @@
   <div>{{ vm.mySelf.name | uppercase }} : {{ vm.mySelf.age }} Years Old.</div>
   <separator></separator>
   <div class="inputs_wrapper">
-    <input type="text" placeholder="Search Users" ng-model="searchExpression" />
+    <input class="search_input" type="text" placeholder="Search Users" ng-model="searchExpression" />
     <select name="order" id="order" ng-model="orderExpression">
       <option value="">Order By</option>
       <option value="id">ID</option>

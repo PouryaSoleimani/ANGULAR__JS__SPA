@@ -888,7 +888,7 @@ select {
   padding: 6px;
   border-radius: 8px;
   margin: 0;
-  outline: 2px solid black;
+  outline: 2px solid rgba(0, 0, 0, 0.261);
   height: 42px;
 }
 
@@ -906,6 +906,10 @@ input[type="radio"] {
   height: 24px;
   outline: none;
 }
+.search_input {
+  height: 35px;
+  outline: 2px solid rgba(0, 0, 0, 0.261);
+}
 
 .form_group {
   display: grid;
@@ -913,7 +917,7 @@ input[type="radio"] {
   align-items: center;
   gap: 12px;
   margin-bottom: 8px;
-  border: 1px solid var(--border);
+  outline: 2px solid rgba(0, 0, 0, 0.261);
   padding: 6px;
   border-radius: 6px;
   background-color: var(--background);
