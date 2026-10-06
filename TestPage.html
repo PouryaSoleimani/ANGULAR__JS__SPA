@@ -39,7 +39,10 @@
     <space></space>
   </div>
   <div class="users_container">
-    <div class="user_box" ng-repeat="user in vm.users | filter : searchExpression | orderBy: orderExpression:sortExpression">
+    <div
+      class="user_box"
+      ng-repeat="user in vm.users | filter : searchExpression | orderBy: orderExpression:sortExpression"
+    >
       {{user.id}}.{{ user.name | uppercase }}
     </div>
   </div>
