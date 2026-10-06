@@ -4,7 +4,9 @@
   {{searchExpression}}
   <separator></separator>
   <h3>FRIENDS LIST:</h3>
-  <div ng-repeat="person in vm.people | filter:searchExpression:strict">{{ person | uppercase }}</div>
+  <div ng-repeat="person in vm.people | filter:searchExpression:strict">
+    {{ person | uppercase }}
+  </div>
   <!-- PRICES -->
   <separator></separator>
   <div ng-repeat="price in vm.prices | limitTo : 2">{{ price | currency }}</div>
@@ -20,7 +22,12 @@
   <separator></separator>
 
   <div class="inputs_wrapper">
-    <input class="search_input" type="text" placeholder="Search Users" ng-model="searchExpression" />
+    <input
+      class="search_input"
+      type="text"
+      placeholder="Search Users"
+      ng-model="searchExpression"
+    />
 
     <select name="order" id="order" ng-model="orderExpression">
       <option value="">Order By</option>
@@ -35,7 +42,13 @@
       </div>
       <div class="form_group">
         <label for="reverse">Descending</label>
-        <input type="radio" name="sort" id="reverse" ng-model="sortExpression" value="reverse" />
+        <input
+          type="radio"
+          name="sort"
+          id="reverse"
+          ng-model="sortExpression"
+          value="reverse"
+        />
       </div>
     </div>
 
