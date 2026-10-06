@@ -880,3 +880,63 @@ section {
   height: 2px;
   margin-block: 6px;
 }
+
+select {
+  border: none;
+  outline: none;
+  background: var(--background);
+  padding: 6px;
+  border-radius: 8px;
+  margin: 0;
+  outline: 2px solid black;
+  height: 42px;
+}
+
+.radios_wrapper {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: fit-content;
+  gap: 24px;
+}
+
+input[type="radio"] {
+  border: none;
+  accent-color: black;
+  width: 24px;
+  height: 24px;
+  outline: none;
+}
+
+.form_group {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  border: 1px solid var(--border);
+  padding: 6px;
+  border-radius: 6px;
+  background-color: var(--background);
+}
+
+.inputs_wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: space-between;
+  width: 100%;
+  gap: 16px;
+}
+
+.users_container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 16px;
+}
+
+.user_box {
+  outline: 5px solid #00000040;
+  padding: 12px 8px;
+  border-radius: 6px;
+  background-color: black;
+  color: white;
+}

@@ -1,17 +1,13 @@
 <div>
   <!-- FRIENDS -->
-  <input type="text" placeholder="Search Friends" ng-model="searchExpression">
+  <input type="text" placeholder="Search Friends" ng-model="searchExpression" />
   {{searchExpression}}
   <separator></separator>
-  <h3>FRIENDS LIST: </h3>
-  <div ng-repeat="person in vm.people | filter:searchExpression:strict">
-    {{ person | uppercase }}
-  </div>
+  <h3>FRIENDS LIST:</h3>
+  <div ng-repeat="person in vm.people | filter:searchExpression:strict">{{ person | uppercase }}</div>
   <!-- PRICES -->
   <separator></separator>
-  <div ng-repeat="price in vm.prices track by $index">
-    {{ price | currency }}
-  </div>
+  <div ng-repeat="price in vm.prices | limitTo : 2">{{ price | currency }}</div>
   <!-- DIRECTIVES -->
   <separator></separator>
   <superman></superman>
@@ -20,7 +16,31 @@
   <div logger></div>
   <div class="loggerClass"></div>
   <separator></separator>
-  <div>
-    {{vm.mySelf.name.toUpperCase()}} : {{vm.mySelf.age}} Years Old.
+  <div>{{ vm.mySelf.name | uppercase }} : {{ vm.mySelf.age }} Years Old.</div>
+  <separator></separator>
+  <div class="inputs_wrapper">
+    <input type="text" placeholder="Search Users" ng-model="searchExpression" />
+    <select name="order" id="order" ng-model="orderExpression">
+      <option value="">Order By</option>
+      <option value="id">ID</option>
+      <option value="name">NAME</option>
+    </select>
+    <div class="radios_wrapper">
+      <div class="form_group">
+        <label for="sort">Ascending</label>
+        <input type="radio" name="sort" id="sort" ng-model="sortExpression" checked />
+      </div>
+      <div class="form_group">
+        <label for="reverse">Descending</label>
+        <input type="radio" name="sort" id="reverse" ng-model="sortExpression" value="reverse" />
+      </div>
+    </div>
+    <space></space>
+    <space></space>
+  </div>
+  <div class="users_container">
+    <div class="user_box" ng-repeat="user in vm.users | filter : searchExpression | orderBy: orderExpression:sortExpression">
+      {{user.id}}.{{ user.name | uppercase }}
+    </div>
   </div>
 </div>
