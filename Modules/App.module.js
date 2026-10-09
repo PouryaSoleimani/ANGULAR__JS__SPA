@@ -42,7 +42,7 @@ app.config(["$routeProvider", function ($routeProvider) {
     templateUrl: '/Artists.html',
     controller: 'ArtistsController',
   })
-  $routeProvider.when('/user_:userID', {
+  $routeProvider.when('/user_:userID', { // DYNAMIC ROUTES
     templateUrl: '/SingleUser.html',
     controller: 'SingleUserController'
   })

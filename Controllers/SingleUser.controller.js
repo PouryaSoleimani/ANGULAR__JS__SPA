@@ -1,7 +1,10 @@
-app.controller('SingleUserController', ['$scope', 'sharedData',
-  function ($scope, sharedData) {
+app.controller('SingleUserController', ['$scope', '$http', 'sharedData', '$routeParams',
+  function ($scope, $http, sharedData, $routeParams,) {
     $scope.vm = {
-      selectedUser: sharedData.selectedUser,
+      selectedUser: {},
     }
-    console.log('shared Data =>', sharedData.selectedUser )
+    $http.get(`https://jsonplaceholder.typicode.com/users/${$routeParams.userID}`).then(function (data) {
+      $scope.vm.selectedUser = data.data
+    })
+    console.log('shared Data =>', $routeParams, $scope.vm.selectedUser)
   }])
