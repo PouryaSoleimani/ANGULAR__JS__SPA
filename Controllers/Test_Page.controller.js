@@ -19,6 +19,7 @@ app.controller('TestPageController', ['$scope', '$http', 'sharedData',
     $http.get('https://jsonplaceholder.typicode.com/users')
       .then(function (data) {
         $scope.vm.users = data.data;
+        sharedData.users = data.data
         console.log({ users: $scope.vm.users })
       })
   }])
