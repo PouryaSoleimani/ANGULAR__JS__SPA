@@ -1,7 +1,11 @@
-<div class="grid place-items-center min-h-[95vh]">
+<div class="grid relative place-items-center min-h-[95vh]">
   <div class="loading animate-spin" ng-if="vm.loading">
     <i class="ph ph-spinner"></i>
   </div>
+  <button ng-click="vm.back()" class="btn btn-black absolute top-10 left-10">
+    <i class="ph-fill ph-arrow-fat-left"></i>
+    BACK
+  </button>
   <h3 ng-show="!vm.loading" class="single_user_name">
     {{vm.selectedUser.id}}.{{vm.selectedUser.name}}
   </h3>
