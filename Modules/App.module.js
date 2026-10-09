@@ -42,5 +42,9 @@ app.config(["$routeProvider", function ($routeProvider) {
     templateUrl: '/Artists.html',
     controller: 'ArtistsController',
   })
+  $routeProvider.when('/user_:userID', {
+    templateUrl: '/SingleUser.html',
+    controller: 'SingleUserController'
+  })
 },
 ]);  

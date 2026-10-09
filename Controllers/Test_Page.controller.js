@@ -1,10 +1,14 @@
 //^ TEST PAGE CONTROLLER
-app.controller('TestPageController', ['$scope', '$http',
-  function ($scope, $http) {
+app.controller('TestPageController', ['$scope', '$http', 'sharedData',
+  function ($scope, $http, sharedData) {
     $scope.vm = {
       people: ["mamad", 'majid', 'mahyar', 'ehsan', 'nima', 'milad'],
       prices: [123124, 2412421, 515125, 123123, 51512, 1412412],
-      users: []
+      users: [],
+      setSelectedUser: function (user) {
+        sharedData.selectedUser = user
+        console.log({ user:  $scope.vm.selectedUser })
+      }
     }
 
     $http.get('/data.json').then(function (data) {
@@ -19,6 +23,11 @@ app.controller('TestPageController', ['$scope', '$http',
       })
   }])
 
+app.factory('sharedData', function () {
+  return {
+    selectedUser: {}
+  }
+})
 // DIRECTIVES
 app.directive('separator', function () {
   return {
