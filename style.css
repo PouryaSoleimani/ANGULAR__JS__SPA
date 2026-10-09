@@ -959,3 +959,10 @@ a.user_anchor {
   padding: 12px 16px;
   border: 6px solid black;
 }
+
+.loading {
+  i {
+    font-size: 48px;
+    color: #ccc;
+  }
+}
