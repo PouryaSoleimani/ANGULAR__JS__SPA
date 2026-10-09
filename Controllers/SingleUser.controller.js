@@ -3,16 +3,29 @@ app.controller('SingleUserController', ['$scope', '$http', '$routeParams', '$win
     $scope.vm = {
       loading: true,
       selectedUser: {},
+      selectedID: $routeParams.userID,
+      getUser: function () {
+        $http.get(`https://jsonplaceholder.typicode.com/users/${$scope.vm.selectedID}`)
+          .then(function (data) {
+            $scope.vm.selectedUser = data.data;
+            $scope.vm.loading = false;
+          })
+      },
       back: function () {
         $window.history.back();
-      }
+      },
+      prev: function () {
+        $scope.vm.selectedID--
+        $scope.vm.getUser()
+      },
+      next: function () {
+        $scope.vm.selectedID++
+        $scope.vm.getUser()
+      },
+
     }
 
-    $http.get(`https://jsonplaceholder.typicode.com/users/${$routeParams.userID}`)
-      .then(function (data) {
-        $scope.vm.selectedUser = data.data;
-        $scope.vm.loading = false;
-      })
+    $scope.vm.getUser()
 
     console.log('shared Data =>', $routeParams, $scope.vm.selectedUser)
   }])

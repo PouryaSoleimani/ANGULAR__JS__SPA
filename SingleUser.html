@@ -2,11 +2,33 @@
   <div class="loading animate-spin" ng-if="vm.loading">
     <i class="ph ph-spinner"></i>
   </div>
+  <!-- BACK BUTTON -->
   <button ng-click="vm.back()" class="btn btn-black absolute top-10 left-10">
     <i class="ph-fill ph-arrow-fat-left"></i>
     BACK
   </button>
+
   <h3 ng-show="!vm.loading" class="single_user_name">
     {{vm.selectedUser.id}}.{{vm.selectedUser.name}}
   </h3>
+
+  <div
+    class="w-fit mx-auto absolute bottom-[30%] left-1/2 -translate-x-[60%] right-0 grid grid-cols-2 gap-8"
+  >
+    <button
+      ng-disabled="vm.selectedID <= 0"
+      ng-click="vm.prev()"
+      ng-click="vm.back()"
+      class="btn btn-black w-32"
+    >
+      <i class="ph-fill ph-arrow-fat-left"></i>
+    </button>
+    <button
+      ng-disabled="vm.selectedID >= 10"
+      ng-click="vm.next()"
+      class="btn btn-black w-32"
+    >
+      <i class="ph-fill ph-arrow-fat-right"></i>
+    </button>
+  </div>
 </div>
