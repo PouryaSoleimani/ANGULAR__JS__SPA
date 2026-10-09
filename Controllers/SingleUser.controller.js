@@ -1,7 +1,7 @@
 app.controller('SingleUserController', ['$scope', 'sharedData',
   function ($scope, sharedData) {
     $scope.vm = {
-      selectedUser: sharedData.selectedUser
+      selectedUser: sharedData.selectedUser,
     }
-    console.log('shared Data =>', $scope.vm)
+    console.log('shared Data =>', sharedData.selectedUser )
   }])

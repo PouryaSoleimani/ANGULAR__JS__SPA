@@ -7,7 +7,7 @@ app.controller('TestPageController', ['$scope', '$http', 'sharedData',
       users: [],
       setSelectedUser: function (user) {
         sharedData.selectedUser = user
-        console.log({ user:  $scope.vm.selectedUser })
+        console.log({ user: sharedData.selectedUser })
       }
     }
 
