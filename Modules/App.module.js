@@ -1,5 +1,5 @@
 // DEPENDENCIES FOR MODULE => NG_ROUTE
-var app = angular.module("UsersApp", ["ngRoute"]);
+var app = angular.module("UsersApp", ["ngRoute", "ngAnimate"]);
 
 // APP.FACTORY ==========================================================
 app.factory("SharedData", function () {
@@ -7,7 +7,7 @@ app.factory("SharedData", function () {
 });
 
 // APP CONFIG | ROUTE__PROVIDER ===========================================================
-app.config(["$routeProvider", function ($routeProvider) {
+app.config(["$routeProvider", "$ngAnimate", function ($routeProvider, $ngAnimateProvider) {
   // USERS ROUTES
   $routeProvider.when("/", {
     templateUrl: "/AllUsers.html",

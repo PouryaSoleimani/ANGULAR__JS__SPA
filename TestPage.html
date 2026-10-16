@@ -45,7 +45,7 @@
 
   <div class="users_container">
     <div class="user_box" ng-repeat="user in vm.users | filter : searchExpression | orderBy: orderExpression:sortExpression" ng-click="vm.setSelectedUser(user)">
-      <a class="user_anchor" href="#!user_{{user.id}}"> {{user.id}}.{{ user.name | uppercase }} </a>
+      <a ng-animate="'animate'" class="user_anchor" href="#!user_{{user.id}}"> {{user.id}}.{{ user.name | uppercase }} </a>
     </div>
   </div>
 </div>

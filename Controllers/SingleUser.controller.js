@@ -1,5 +1,5 @@
-app.controller('SingleUserController', ['$scope', '$http', '$routeParams', '$window',
-  function ($scope, $http, $routeParams, $window) {
+app.controller('SingleUserController', ['$scope', '$http', '$routeParams', '$window', '$ngAnimate',
+  function ($scope, $http, $routeParams, $window, $ngAnimate) {
     $scope.vm = {
       loading: true,
       selectedUser: {},
