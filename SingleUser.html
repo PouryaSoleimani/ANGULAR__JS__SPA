@@ -15,10 +15,10 @@
 
   <!-- NAVIGATION -->
   <div class="w-fit mx-auto absolute bottom-[30%] left-1/2 -translate-x-[60%] right-0 grid grid-cols-2 gap-8">
-    <button ng-disabled="vm.selectedID <= 0" ng-click="vm.prev()" ng-click="vm.back()" class="btn btn-black w-32 h-44">
+    <button ng-click="vm.prev()" ng-click="vm.back()" class="btn btn-black w-32 h-44">
       <i class="ph-fill ph-arrow-fat-left"></i>
     </button>
-    <button ng-disabled="vm.selectedID >= 10" ng-click="vm.next()" class="btn btn-black w-32">
+    <button ng-click="vm.next()" class="btn btn-black w-32">
       <i class="ph-fill ph-arrow-fat-right"></i>
     </button>
   </div>

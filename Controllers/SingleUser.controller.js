@@ -15,14 +15,35 @@ app.controller('SingleUserController', ['$scope', '$http', '$routeParams', '$win
         $window.history.back();
       },
       prev: function () {
-        $scope.vm.selectedID--
+        if (Number($scope.vm.selectedID) <= 1) {
+          $scope.vm.selectedID = 10
+        } else {
+          $scope.vm.selectedID--
+        }
         $scope.vm.getUser()
       },
       next: function () {
-        $scope.vm.selectedID++
+        if (Number($scope.vm.selectedID) >= 10) {
+          $scope.vm.selectedID = 1
+        } else {
+          $scope.vm.selectedID++
+        }
         $scope.vm.getUser()
       },
+      keyboardHandler: function () {
+        $window.addEventListener('keydown', function (e) {
+          if (e.key !== 'ArrowRight' || e.key !== "ArrowLeft") return;
+
+          if (e.key == 'ArrowRight') {
+            $scope.vm.prev()
+          } else if (e.key == 'ArrowLeft') {
+            $scope.vm.next()
+          }
+          console.log(e.key)
+        })
+      }
     }
     $scope.vm.getUser()
+    $scope.vm.keyboardHandler()
     console.log('shared Data =>', $routeParams, $scope.vm.selectedUser)
   }])
