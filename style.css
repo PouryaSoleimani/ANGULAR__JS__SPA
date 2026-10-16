@@ -1048,3 +1048,32 @@ a.user_anchor {
   opacity: 0;
   transform: translateY(-20px);
 }
+
+.single_user_name {
+  transition: all 500ms ease;
+  position: absolute;
+  inset: 0;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+}
+
+.single_user_name.ng-enter {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.single_user_name.ng-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.single_user_name.ng-leave {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.single_user_name.ng-leave-active {
+  opacity: 0;
+  transform: translateY(30px);
+}

@@ -1,7 +1,8 @@
-app.controller('SingleUserController', ['$scope', '$http', '$routeParams', '$window',
-  function ($scope, $http, $routeParams, $window) {
+app.controller('SingleUserController', ['$scope', '$http', '$routeParams', '$window', '$timeout',
+  function ($scope, $http, $routeParams, $window, $timeout) {
     $scope.vm = {
       loading: true,
+      isUserChanged: true,
       selectedUser: {},
       selectedID: $routeParams.userID,
       getUser: function () {
@@ -16,20 +17,29 @@ app.controller('SingleUserController', ['$scope', '$http', '$routeParams', '$win
         $window.history.back();
       },
       prev: function () {
+        $scope.vm.isUserChanged = false;
         if (Number($scope.vm.selectedID) <= 1) {
           $scope.vm.selectedID = 10
         } else {
           $scope.vm.selectedID--
         }
-        $scope.vm.getUser()
+        $scope.vm.getUser();
+        $timeout(function () {
+          $scope.vm.isUserChanged = true;
+        }, 300)
       },
       next: function () {
+        $scope.vm.isUserChanged = false;
+
         if (Number($scope.vm.selectedID) >= 10) {
           $scope.vm.selectedID = 1
         } else {
           $scope.vm.selectedID++
         }
-        $scope.vm.getUser()
+        $scope.vm.getUser();
+        $timeout(function () {
+          $scope.vm.isUserChanged = true;
+        }, 300)
       },
       keyboardHandler: function () {
         $window.addEventListener('keydown', function (e) {
