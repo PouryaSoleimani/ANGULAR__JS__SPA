@@ -933,10 +933,9 @@ input[type="radio"] {
   gap: 16px;
 }
 
-// ANUGLAR ANIMATIONS
 .users_container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(6, 1fr);
   gap: 16px;
 }
 
@@ -945,13 +944,14 @@ input[type="radio"] {
   border-radius: 6px;
   background-color: black;
   color: white;
-  transition: all 500ms ease-in-out;
+  transition: all 250ms ease-in-out;
 
   &:hover {
     scale: 1.025;
   }
 }
 
+// ANUGLAR ANIMATIONS
 .user_box.ng-enter {
   opacity: 0;
 }
@@ -988,4 +988,54 @@ a.user_anchor {
     font-size: 48px;
     color: #ccc;
   }
+}
+
+.panel {
+  transition: opacity 400ms ease-in-out;
+  background-color: black;
+  padding: 10px;
+  border-radius: 6px;
+  color: white;
+  width: fit-content;
+}
+
+.panel.ng-hide {
+  display: inline-block !important;
+}
+
+.panel.ng-enter {
+  opacity: 0;
+}
+.panel.ng-enter-active {
+  opacity: 1;
+}
+.panel.ng-leave {
+  opacity: 1;
+}
+.panel.ng-leave-active {
+  opacity: 0;
+}
+
+.select_box {
+  transition: all 300ms ease-in-out;
+}
+
+.select_box.ng-enter {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.select_box.ng-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.select_box.ng-leave {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.select_box.ng-leave-active {
+  opacity: 0;
+  transform: translateY(-20px);
 }
