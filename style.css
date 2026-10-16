@@ -944,6 +944,11 @@ input[type="radio"] {
   border-radius: 6px;
   background-color: black;
   color: white;
+  transition: all 500ms ease-in-out;
+
+  &:hover {
+    scale: 1.025;
+  }
 }
 
 a.user_anchor {
@@ -969,35 +974,14 @@ a.user_anchor {
 }
 
 // ANGULAR ANIMATIONS
-.panel {
-  opacity: 1;
-  transform: translateY(0);
-  transition:
-    opacity 500ms ease,
-    transform 500ms ease;
+.friends__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
-
-.panel.ng-hide {
-  display: block !important;
-  opacity: 0;
-}
-
-.panel.ng-enter {
-  opacity: 0;
-  transform: translateY(-10px);
-}
-
-.panel.ng-enter-active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.panel.ng-leave {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.panel.ng-leave-active {
-  opacity: 0;
-  transform: translateY(-10px);
+.friend__box {
+  border: 3px solid #00000030;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
 }
