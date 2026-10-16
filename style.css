@@ -951,6 +951,7 @@ input[type="radio"] {
   }
 }
 
+// ANUGLAR ANIMATIONS
 .user_box.ng-enter {
   opacity: 0;
 }
