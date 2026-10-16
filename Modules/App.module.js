@@ -7,7 +7,7 @@ app.factory("SharedData", function () {
 });
 
 // APP CONFIG | ROUTE__PROVIDER ===========================================================
-app.config(["$routeProvider", "$ngAnimate", function ($routeProvider, $ngAnimateProvider) {
+app.config(["$routeProvider", function ($routeProvider) {
   // USERS ROUTES
   $routeProvider.when("/", {
     templateUrl: "/AllUsers.html",

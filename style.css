@@ -967,3 +967,37 @@ a.user_anchor {
     color: #ccc;
   }
 }
+
+// ANGULAR ANIMATIONS
+.panel {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 500ms ease,
+    transform 500ms ease;
+}
+
+.panel.ng-hide {
+  display: block !important;
+  opacity: 0;
+}
+
+.panel.ng-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.panel.ng-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.panel.ng-leave {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.panel.ng-leave-active {
+  opacity: 0;
+  transform: translateY(-10px);
+}

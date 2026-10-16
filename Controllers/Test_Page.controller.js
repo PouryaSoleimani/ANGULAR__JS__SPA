@@ -1,6 +1,8 @@
 //^ TEST PAGE CONTROLLER
 app.controller('TestPageController', ['$scope', '$http', 'sharedData',
   function ($scope, $http, sharedData) {
+    showPanel = true;
+
     $scope.vm = {
       people: ["mamad", 'majid', 'mahyar', 'ehsan', 'nima', 'milad'],
       prices: [123124, 2412421, 515125, 123123, 51512, 1412412],

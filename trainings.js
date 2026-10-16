@@ -115,7 +115,7 @@ function MyCrtl($scope) {
   };
 }
 
-var app = angular.module("appModule", []);
+var app = angular.module("appModule", ['ngAnimate']);
 app.controller("AppController", function ($scope) {
   $scope.name = "Pourya";
   $scope.family = "Soleimani";
@@ -125,7 +125,7 @@ app.controller("AppController", function ($scope) {
 });
 
 // SAMPLE PROJECT
-var project = angular.module("ProjectModule", []);
+var project = angular.module("ProjectModule", ['ngAnimate']);
 project.controller("ProjectController", function ($scope) {
   $scope.count = 0;
   $scope.price = 1000;

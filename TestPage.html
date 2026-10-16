@@ -48,4 +48,13 @@
       <a ng-animate="'animate'" class="user_anchor" href="#!user_{{user.id}}"> {{user.id}}.{{ user.name | uppercase }} </a>
     </div>
   </div>
+
+  <separator></separator>
+  <h2>ANIMATION</h2>
+  <space></space>
+  <div></div>
+
+  <button ng-click="showPanel = !showPanel">Toggle Panel</button>
+  <space></space>
+  <h2 class="panel" ng-show="showPanel">Hello AngularJS!</h2>
 </div>
