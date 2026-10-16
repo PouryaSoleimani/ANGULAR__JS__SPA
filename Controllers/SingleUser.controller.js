@@ -24,8 +24,6 @@ app.controller('SingleUserController', ['$scope', '$http', '$routeParams', '$win
       },
 
     }
-
     $scope.vm.getUser()
-
     console.log('shared Data =>', $routeParams, $scope.vm.selectedUser)
   }])
