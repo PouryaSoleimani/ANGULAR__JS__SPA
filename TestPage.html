@@ -6,7 +6,9 @@
   <h3>FRIENDS LIST:</h3>
   <space></space>
   <div class="users_container p-12">
-    <div ng-repeat="person in vm.people | filter:searchExpression:strict" class="user_box h-32 flex items-center justify-center">{{ person | uppercase }}</div>
+    <div ng-animate="'animate'" ng-repeat="person in vm.people | filter:searchExpression:strict" class="user_box h-32 flex items-center justify-center">
+      {{ person | uppercase }}
+    </div>
   </div>
   <!-- PRICES -->
   <separator></separator>

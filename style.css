@@ -951,6 +951,22 @@ input[type="radio"] {
   }
 }
 
+.user_box.ng-enter {
+  opacity: 0;
+}
+
+.user_box.ng-enter-active {
+  opacity: 1;
+}
+
+.user_box.ng-leave {
+  opacity: 1;
+}
+
+.user_box.ng-leave-active {
+  opacity: 0;
+}
+
 a.user_anchor {
   padding: 12px 8px;
   color: inherit;

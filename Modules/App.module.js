@@ -2,7 +2,6 @@
 var app = angular.module("UsersApp", [
   "ngRoute",
   "ngAnimate",
-  "TestPageController"
 ]);
 
 // APP.FACTORY ==========================================================
