@@ -1,5 +1,5 @@
-app.controller('SingleUserController', ['$scope', '$http', '$routeParams', '$window', '$ngAnimate',
-  function ($scope, $http, $routeParams, $window, $ngAnimate) {
+app.controller('SingleUserController', ['$scope', '$http', '$routeParams', '$window',
+  function ($scope, $http, $routeParams, $window) {
     $scope.vm = {
       loading: true,
       selectedUser: {},
@@ -8,6 +8,7 @@ app.controller('SingleUserController', ['$scope', '$http', '$routeParams', '$win
         $http.get(`https://jsonplaceholder.typicode.com/users/${$scope.vm.selectedID}`)
           .then(function (data) {
             $scope.vm.selectedUser = data.data;
+          }).then(() => {
             $scope.vm.loading = false;
           })
       },

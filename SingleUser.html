@@ -1,21 +1,38 @@
-<div class="grid relative place-items-center min-h-[95vh]">
-  <div class="loading animate-spin" ng-if="vm.loading">
-    <i class="ph ph-spinner"></i>
-  </div>
+<div class="loading animate-spin" ng-if="vm.loading">
+  <i class="ph ph-spinner"></i>
+</div>
+
+<div
+  ng-if="!vm.loading"
+  class="grid relative place-items-center min-h-[95vh]"
+>
   <!-- BACK BUTTON -->
-  <button ng-click="vm.back()" class="btn btn-black absolute top-10 left-10">
+  <button
+    ng-click="vm.back()"
+    class="btn btn-black absolute top-10 left-10"
+  >
     <i class="ph-fill ph-arrow-fat-left"></i>
     BACK
   </button>
 
-  <div ng-show="!vm.loading" class="single_user_name">
+  <div class="single_user_name">
     <h2>{{vm.selectedUser.id}}.{{vm.selectedUser.name}}</h2>
-    <p class="mt-12">{{vm.selectedUser.address.street}}{{vm.selectedUser.address.suite}} {{vm.selectedUser.address.city}}-{{vm.selectedUser.address.zipcode}}</p>
+    <p class="mt-12">
+      Address:
+      {{vm.selectedUser.address.street}}{{vm.selectedUser.address.suite}}
+      {{vm.selectedUser.address.city}}-{{vm.selectedUser.address.zipcode}}
+    </p>
   </div>
 
   <!-- NAVIGATION -->
-  <div class="w-fit mx-auto absolute bottom-[30%] left-1/2 -translate-x-[60%] right-0 grid grid-cols-2 gap-8">
-    <button ng-click="vm.prev()" ng-click="vm.back()" class="btn btn-black w-32 h-44">
+  <div
+    class="w-fit mx-auto absolute bottom-[30%] left-1/2 -translate-x-[60%] right-0 grid grid-cols-2 gap-8"
+  >
+    <button
+      ng-click="vm.prev()"
+      ng-click="vm.back()"
+      class="btn btn-black w-32 h-44"
+    >
       <i class="ph-fill ph-arrow-fat-left"></i>
     </button>
     <button ng-click="vm.next()" class="btn btn-black w-32">
