@@ -30,7 +30,6 @@ app.controller('SingleUserController', ['$scope', '$http', '$routeParams', '$win
       },
       next: function () {
         $scope.vm.isUserChanged = false;
-
         if (Number($scope.vm.selectedID) >= 10) {
           $scope.vm.selectedID = 1
         } else {
