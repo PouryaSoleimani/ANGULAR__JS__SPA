@@ -933,9 +933,10 @@ input[type="radio"] {
   gap: 16px;
 }
 
+// ANUGLAR ANIMATIONS
 .users_container {
   display: grid;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 16px;
 }
 
@@ -951,7 +952,6 @@ input[type="radio"] {
   }
 }
 
-// ANUGLAR ANIMATIONS
 .user_box.ng-enter {
   opacity: 0;
 }
@@ -988,17 +988,4 @@ a.user_anchor {
     font-size: 48px;
     color: #ccc;
   }
-}
-
-// ANGULAR ANIMATIONS
-.friends__wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-.friend__box {
-  border: 3px solid #00000030;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px 12px;
 }
