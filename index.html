@@ -7,9 +7,21 @@
     <link rel="stylesheet" href="/bootstrap.min.css" />
     <link rel="stylesheet" href="/style.css" />
     <!-- PHOSPHOR ICONS -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- TITLE -->
     <title>ANGULAR_JS_SPA</title>
@@ -24,6 +36,7 @@
     <script src="/Controllers/Add_User.controller.js"></script>
     <script src="/Controllers/Single_User.controller.js"></script>
     <script src="/Controllers/SingleUser.controller.js"></script>
+    <script src="/Controllers/AngularForm.controller.js"></script>
     <!-- PRODUCTS SRCIPTS -->
     <script src="/Services/Product.service.js"></script>
     <script src="/Controllers/All_Products.controller.js"></script>
@@ -51,7 +64,9 @@
           <!-- USERS -->
           <h4>USERS</h4>
           <a href="#!AllUsers" class="btn btn-info anchor"> <i class="ph-fill ph-users"></i> ALL USERS </a>
-          <a href="#!SearchUser" class="btn btn-primary anchor"> <i class="ph-bold ph-magnifying-glass"></i> SEARCH USER </a>
+          <a href="#!SearchUser" class="btn btn-primary anchor">
+            <i class="ph-bold ph-magnifying-glass"></i> SEARCH USER
+          </a>
           <a href="#!AddNewPerson" class="btn btn-success anchor">
             <i class="ph-fill ph-plus-circle"></i>
             ADD USER
@@ -60,7 +75,9 @@
           <!-- PRODUCTS -->
           <h4>PRODUCTS</h4>
           <a href="#!AllProducts" class="btn btn-warning anchor"> <i class="ph-fill ph-users"></i> ALL PRODUCTS </a>
-          <a href="#!SearchProduct" class="btn btn-danger anchor"> <i class="ph-bold ph-magnifying-glass"></i> SEARCH PRODUCTS </a>
+          <a href="#!SearchProduct" class="btn btn-danger anchor">
+            <i class="ph-bold ph-magnifying-glass"></i> SEARCH PRODUCTS
+          </a>
           <a href="#!AddNewProduct" class="btn btn-black anchor">
             <i class="ph-fill ph-plus-circle"></i>
             ADD PRODUCT
@@ -74,6 +91,12 @@
           <a href="#!ArtistsPage" class="btn btn-danger anchor">
             <i class="ph-bold ph-guitar"></i>
             ARTISTS
+          </a>
+          <div class="horizontal__separator"></div>
+          <!-- FORM VALIDATION -->
+          <a href="#!AngularForm" class="btn btn-success anchor">
+            <i class="ph-fill ph-seal-check"></i>
+            ANGULAR FORM
           </a>
         </div>
       </aside>

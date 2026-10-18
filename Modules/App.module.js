@@ -47,5 +47,10 @@ app.config(["$routeProvider", function ($routeProvider) {
     templateUrl: '/SingleUser.html',
     controller: 'SingleUserController'
   })
+  // FORM VALIDATION
+  $routeProvider.when('/AngularForm', {
+    templateUrl: '/AngularForm.html',
+    controller: 'AngularFormController'
+  })
 },
 ]);  
