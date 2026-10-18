@@ -71,4 +71,8 @@
   <button ng-click="showPanel = !showPanel">Toggle Panel</button>
   <space></space>
   <h2 class="panel" ng-animate="'animate'" ng-if="showPanel">Hello AngularJS!</h2>
+  <div class="box__wrapper">
+    <button ng-click="showBox = !showBox">TOGGLE SHOW</button>
+    <div class="box" ng-animate="'animate'" ng-if="showBox">BOX</div>
+  </div>
 </div>

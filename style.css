@@ -1077,3 +1077,45 @@ a.user_anchor {
   opacity: 0;
   transform: translateY(30px);
 }
+
+.box__wrapper {
+  position: relative;
+}
+
+.box {
+  background-color: lightgray;
+  width: 350px;
+  height: 150px;
+  border-radius: 20px;
+  margin: 12px auto;
+  outline: 6px solid #00000040;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: -100px;
+  right: 120px;
+  transition: all 400ms ease-in-out;
+}
+.box.ng-hide {
+  display: grid !important;
+}
+
+.box.ng-enter {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.box.ng-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.box.ng-leave {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.box.ng-leave-active {
+  opacity: 0;
+  transform: translateY(100px);
+}
