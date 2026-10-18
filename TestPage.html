@@ -1,10 +1,6 @@
 <div>
   <!-- FRIENDS -->
-  <input
-    type="text"
-    placeholder="Search Friends"
-    ng-model="searchExpression"
-  />
+  <input type="text" placeholder="Search Friends" ng-model="searchExpression" />
   {{searchExpression}}
   <separator></separator>
   <h3>FRIENDS LIST:</h3>
@@ -20,9 +16,7 @@
   </div>
   <!-- PRICES -->
   <separator></separator>
-  <div ng-repeat="price in vm.prices | limitTo : 2">
-    {{ price | currency }}
-  </div>
+  <div ng-repeat="price in vm.prices | limitTo : 2">{{ price | currency }}</div>
   <!-- DIRECTIVES -->
   <separator></separator>
   <superman></superman>
@@ -31,26 +25,13 @@
   <div logger></div>
   <div class="loggerClass"></div>
   <separator></separator>
-  <div>
-    {{ vm.mySelf.name | uppercase }} : {{ vm.mySelf.age }} Years Old.
-  </div>
+  <div>{{ vm.mySelf.name | uppercase }} : {{ vm.mySelf.age }} Years Old.</div>
   <separator></separator>
 
   <div class="inputs_wrapper">
-    <input
-      class="search_input"
-      type="text"
-      placeholder="Search Users"
-      ng-model="searchExpression"
-    />
+    <input class="search_input" type="text" placeholder="Search Users" ng-model="searchExpression" />
 
-    <select
-      class="select_box"
-      ng-animate="'animate'"
-      name="order"
-      id="order"
-      ng-model="orderExpression"
-    >
+    <select class="select_box" ng-animate="'animate'" name="order" id="order" ng-model="orderExpression">
       <option value="">Order By</option>
       <option value="id">ID</option>
       <option value="name">NAME</option>
@@ -59,23 +40,11 @@
     <div class="radios_wrapper">
       <div class="form_group">
         <label for="sort">Ascending</label>
-        <input
-          type="radio"
-          name="sort"
-          id="sort"
-          ng-model="sortExpression"
-          checked
-        />
+        <input type="radio" name="sort" id="sort" ng-model="sortExpression" checked />
       </div>
       <div class="form_group">
         <label for="reverse">Descending</label>
-        <input
-          type="radio"
-          name="sort"
-          id="reverse"
-          ng-model="sortExpression"
-          value="reverse"
-        />
+        <input type="radio" name="sort" id="reverse" ng-model="sortExpression" value="reverse" />
       </div>
     </div>
 
@@ -89,11 +58,7 @@
       ng-repeat="user in vm.users | filter : searchExpression | orderBy: orderExpression:sortExpression"
       ng-click="vm.setSelectedUser(user)"
     >
-      <a
-        ng-animate="'animate'"
-        class="user_anchor"
-        href="#!user_{{user.id}}"
-      >
+      <a ng-animate="'animate'" class="user_anchor" href="#!user_{{user.id}}">
         {{user.id}}.{{ user.name | uppercase }}
       </a>
     </div>
@@ -105,7 +70,5 @@
   <div></div>
   <button ng-click="showPanel = !showPanel">Toggle Panel</button>
   <space></space>
-  <h2 class="panel" ng-animate="'animate'" ng-if="showPanel">
-    Hello AngularJS!
-  </h2>
+  <h2 class="panel" ng-animate="'animate'" ng-if="showPanel">Hello AngularJS!</h2>
 </div>
