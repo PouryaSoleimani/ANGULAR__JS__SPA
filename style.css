@@ -1119,3 +1119,42 @@ a.user_anchor {
   opacity: 0;
   transform: translateY(100px);
 }
+
+.input__field {
+  display: inline-grid;
+  grid-template-columns: 100px auto auto auto;
+  align-items: center;
+
+  i {
+    color: green;
+    font-size: 32px;
+    margin-left: 12px;
+  }
+}
+
+.valid_input {
+  background-color: rgba(0, 100, 0, 0.085);
+  outline: 3px solid rgba(0, 100, 0, 0.422);
+
+  &:active {
+    outline: 3px solid rgba(0, 100, 0, 0.422);
+  }
+
+  &:focus {
+    outline: 3px solid rgba(0, 100, 0, 0.422);
+  }
+}
+
+.form__error {
+  background-color: rgba(251, 113, 113, 0.134);
+  color: darkred;
+  border-left: 3px solid darkred;
+  padding: 4px 8px 4px 8px;
+  border-radius: 0 4px 4px 0;
+  width: max-content;
+  font-size: 12px;
+  margin-left: 12px;
+  height: 100%;
+  display: grid;
+  align-items: center;
+}

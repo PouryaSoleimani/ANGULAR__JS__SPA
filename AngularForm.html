@@ -1,2 +1,30 @@
-<h2>ANGULAR FORM</h2>
-
+<form novalidate name="myForm">
+  <!-- FIRST NAME -->
+  <div class="input__field">
+    <label for="firstname">Firstname:</label>
+    <input
+      ng-class="{'valid_input': myForm.firstname.$valid}"
+      type="text"
+      ng-required="true"
+      ng-minlength="4"
+      name="firstname"
+      placeholder="firstname"
+      ng-model="user.firstname"
+    />
+    <p class="form__error" ng-if="myForm.firstname.$touched && myForm.firstname.$invalid">Firstname is Required</p>
+    <i class="ph-fill ph-seal-check" ng-if="myForm.firstname.$valid"></i>
+  </div>
+  <space></space>
+  <div class="input__field">
+    <label for="lastname">Lastname:</label>
+    <input type="text" name="lastname" placeholder="Lastname" ng-model="user.lastname" />
+  </div>
+  <space></space>
+  <div class="input__field">
+    <label for="job">Job:</label>
+    <input type="text" name="job" placeholder="Job" ng-model="user.age" />
+  </div>
+  <separator></separator>
+  <space></space>
+  <h5>{{ user }}</h5>
+</form>
