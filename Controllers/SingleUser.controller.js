@@ -46,7 +46,8 @@ app.controller('SingleUserController', ['$scope', '$http', '$routeParams', '$win
 
           if (e.key == 'ArrowRight') {
             $scope.vm.prev()
-          } else if (e.key == 'ArrowLeft') {
+          }
+          else if (e.key == 'ArrowLeft') {
             $scope.vm.next()
           }
           console.log(e.key)
