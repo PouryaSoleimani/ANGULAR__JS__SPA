@@ -935,7 +935,7 @@ input[type="radio"] {
 
 .users_container {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 16px;
 }
 
@@ -1135,7 +1135,7 @@ a.user_anchor {
 .valid_input {
   background-color: rgba(0, 100, 0, 0.085);
   outline: 3px solid rgba(0, 100, 0, 0.422);
-   &:active {
+  &:active {
     outline: 3px solid rgba(0, 100, 0, 0.422);
   }
 
