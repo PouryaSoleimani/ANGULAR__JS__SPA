@@ -1135,8 +1135,7 @@ a.user_anchor {
 .valid_input {
   background-color: rgba(0, 100, 0, 0.085);
   outline: 3px solid rgba(0, 100, 0, 0.422);
-
-  &:active {
+   &:active {
     outline: 3px solid rgba(0, 100, 0, 0.422);
   }
 
