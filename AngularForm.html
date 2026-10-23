@@ -11,7 +11,9 @@
       placeholder="firstname"
       ng-model="user.firstname"
     />
-    <p class="form__error" ng-if="myForm.firstname.$touched && myForm.firstname.$invalid">Firstname is Required</p>
+    <p class="form__error" ng-if="!vm.isFormSubmitted && myForm.firstname.$touched && myForm.firstname.$invalid">
+      Firstname is Required
+    </p>
     <i class="ph-fill ph-seal-check" ng-if="myForm.firstname.$valid"></i>
   </div>
   <space></space>
@@ -26,8 +28,10 @@
       placeholder="Lastname"
       ng-model="user.lastname"
     />
-    <p class="form__error" ng-if="myForm.lastname.$touched && myForm.lastname.$invalid">Lastname is Required</p>
-    <i class="ph-fill ph-seal-check" ng-if="myForm.lastname.$valid"></i>
+    <p class="form__error" ng-if="!vm.isFormSubmitted && myForm.lastname.$touched && myForm.lastname.$invalid">
+      Lastname is Required
+    </p>
+    <i class="ph-fill ph-seal-check err" ng-if="myForm.lastname.$valid"></i>
   </div>
   <space></space>
   <div class="input__field">
@@ -42,10 +46,17 @@
       placeholder="Age"
       ng-model="user.age"
     />
-    <p class="form__error" ng-if="myForm.age.$touched && myForm.age.$invalid">Please Enter a valid Age</p>
+    <p class="form__error" ng-if="!vm.isFormSubmitted && myForm.age.$touched && myForm.age.$invalid">
+      Please Enter a valid Age
+    </p>
     <i class="ph-fill ph-seal-check" ng-if="myForm.age.$valid"></i>
   </div>
   <separator></separator>
-  <space></space>
-  <h5 ng-show="user">{{ user }}</h5>
+  <button ng-disabled="myForm.$invalid" ng-click="submitForm()" class="success m-0 w-full">SUBMIT FORM</button>
+  <space ng-if="user"></space>
+  <h5 ng-show="user">
+    USER OBJECT :
+    <space></space>
+    {{ user }}
+  </h5>
 </form>
