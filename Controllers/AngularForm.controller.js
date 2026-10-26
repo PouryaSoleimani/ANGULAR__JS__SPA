@@ -10,6 +10,14 @@ app.controller('AngularFormController', ['$scope', '$timeout', '$document',
     $scope.vm.init()
     $scope.toast = document.querySelector('.toast')
 
+    $scope.user = {
+      firstname: '',
+      lastname: '',
+      age: '',
+      country: '',
+      phone: '',
+    }
+
     $scope.toastToggle = function () {
       console.log('toast', $scope.toast)
       $scope.toast.classList.add('success')
@@ -20,13 +28,23 @@ app.controller('AngularFormController', ['$scope', '$timeout', '$document',
       }, 1500)
     }
 
+    $scope.isUserExist = Object.values($scope.user).filter(function (item) { item.length !== 0 }).length
+
     $scope.submitForm = function () {
-      $scope.vm.isFormSubmitted = true;
-      $scope.user.firstname = '';
-      $scope.user.lastname = '';
-      $scope.user.age = '';
-      $scope.user.country = '';
-      $scope.user.phone = "";
       $scope.toastToggle()
     }
+
+    $scope.onSubmit = function () {
+      $scope.user = {
+        firstname: '',
+        lastname: '',
+        age: '',
+        country: '',
+        phone: '',
+      }
+      $scope.submitForm();
+      $scope.myForm.$setSubmitted();
+      $scope.myForm.$setPristine();
+      $scope.myForm.$setUntouched();
+    };
   }])
