@@ -25,6 +25,8 @@ app.controller('AngularFormController', ['$scope', '$timeout', '$document',
       $scope.user.firstname = '';
       $scope.user.lastname = '';
       $scope.user.age = '';
+      $scope.user.country = '';
+      $scope.user.phone = "";
       $scope.toastToggle()
     }
   }])

@@ -51,6 +51,29 @@
     </p>
     <i class="ph-fill ph-seal-check" ng-if="myForm.age.$valid"></i>
   </div>
+  <space></space>
+  <div class="input__field">
+    <label for="age">Country:</label>
+    <select ng-model="user.country" aria-placeholder="Country" name="country" id="country" class="country_select">
+      <option value="IRAN" selected>IRAN</option>
+      <option value="USA">USA</option>
+      <option value="GER">GERMANY</option>
+    </select>
+    <p class="form__error" ng-if="!vm.isFormSubmitted && myForm.country.$touched && myForm.country.$invalid">
+      Please Enter a valid Age
+    </p>
+    <i class="ph-fill ph-seal-check" ng-if="myForm.age.$valid"></i>
+  </div>
+  <space></space>
+  <div class="input__field">
+    <label for="age">PhoneNumber: </label>
+    <input ng-required="true" ng-model="user.phone" type="text" name="phone" placeholder="Phonenumber" />
+    <p class="form__error" ng-if="!vm.isFormSubmitted && myForm.phone.$touched && myForm.phone.$invalid">
+      Please Enter a valid Phonenumber
+    </p>
+    <i class="ph-fill ph-seal-check" ng-if="myForm.phone.$valid"></i>
+  </div>
+
   <separator></separator>
   <button ng-disabled="myForm.$invalid" ng-click="submitForm()" class="success m-0 w-full">SUBMIT FORM</button>
   <space ng-if="user"></space>

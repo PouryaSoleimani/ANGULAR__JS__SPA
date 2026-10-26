@@ -104,9 +104,9 @@ button {
 
   &:disabled {
     pointer-events: none;
-    opacity: 0.8;
+    opacity: 1;
     cursor: not-allowed;
-    background-color: #ffffff10;
+    background-color: #cdcdcd;
   }
 
   &.icon {
@@ -1131,7 +1131,7 @@ a.user_anchor {
 
 .input__field {
   display: inline-grid;
-  grid-template-columns: 100px auto auto auto;
+  grid-template-columns: 130px auto auto auto;
   align-items: center;
 
   i {
@@ -1165,4 +1165,10 @@ a.user_anchor {
   height: 100%;
   display: grid;
   align-items: center;
+}
+
+.country_select {
+  width: 210px;
+  border: none;
+  outline: none;
 }
