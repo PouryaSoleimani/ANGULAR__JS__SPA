@@ -10,13 +10,7 @@ app.controller('AngularFormController', ['$scope', '$timeout', '$document',
     $scope.vm.init()
     $scope.toast = document.querySelector('.toast')
 
-    $scope.user = {
-      firstname: '',
-      lastname: '',
-      age: '',
-      country: '',
-      phone: '',
-    }
+    $scope.user = { firstname: '', lastname: '', age: '', country: '', phone: '', }
 
     $scope.toastToggle = function () {
       console.log('toast', $scope.toast)
@@ -35,13 +29,7 @@ app.controller('AngularFormController', ['$scope', '$timeout', '$document',
     }
 
     $scope.onSubmit = function () {
-      $scope.user = {
-        firstname: '',
-        lastname: '',
-        age: '',
-        country: '',
-        phone: '',
-      }
+      $scope.user = { firstname: '', lastname: '', age: '', country: '', phone: '', }
       $scope.submitForm();
       $scope.myForm.$setSubmitted();
       $scope.myForm.$setPristine();
