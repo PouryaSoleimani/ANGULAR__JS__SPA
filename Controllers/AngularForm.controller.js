@@ -1,5 +1,7 @@
 app.controller('AngularFormController', ['$scope', '$timeout', '$document',
   function ($scope, $timeout, $document) {
+    $scope.toast = document.querySelector('.toast')
+
     $scope.vm = {
       isFormSubmitted: false,
       init: function () {
@@ -8,7 +10,6 @@ app.controller('AngularFormController', ['$scope', '$timeout', '$document',
     }
 
     $scope.vm.init()
-    $scope.toast = document.querySelector('.toast')
 
     $scope.user = { firstname: '', lastname: '', age: '', country: '', phone: '', }
 
