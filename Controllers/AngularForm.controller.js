@@ -11,7 +11,7 @@ app.controller('AngularFormController', ['$scope', '$timeout', '$document',
 
     $scope.vm.init()
 
-    $scope.user = { firstname: '', lastname: '', age: '', country: '', phone: '', }
+    $scope.user = {}
 
     $scope.toastToggle = function () {
       console.log('toast', $scope.toast)
@@ -23,14 +23,15 @@ app.controller('AngularFormController', ['$scope', '$timeout', '$document',
       }, 1500)
     }
 
-    $scope.isUserExist = Object.values($scope.user).filter(function (item) { item.length !== 0 }).length
+    $scope.isUserExist = Object.values($scope.user).length
 
     $scope.submitForm = function () {
       $scope.toastToggle()
     }
 
     $scope.onSubmit = function () {
-      $scope.user = { firstname: '', lastname: '', age: '', country: '', phone: '', }
+      console.log('user ', $scope.isUserExist)
+      $scope.user = {}
       $scope.submitForm();
       $scope.myForm.$setSubmitted();
       $scope.myForm.$setPristine();

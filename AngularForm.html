@@ -83,8 +83,9 @@
 
   <separator></separator>
   <button ng-disabled="myForm.$invalid" ng-click="onSubmit()" class="success m-0 w-full">SUBMIT FORM</button>
-  <space ng-if="isUserExist"></space>
-  <h5 ng-show="isUserExist">
+
+  <space ng-if="isUserExist > 0"></space>
+  <h5 ng-if="isUserExist > 0">
     USER OBJECT :
     <space></space>
     {{ user }}
