@@ -10,7 +10,7 @@ app.controller('AngularFormController', ['$scope', '$timeout', '$document',
     }
 
     $scope.vm.init()
-
+    
     $scope.user = {}
 
     $scope.toastToggle = function () {
