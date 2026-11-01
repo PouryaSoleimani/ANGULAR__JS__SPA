@@ -1105,6 +1105,7 @@ a.user_anchor {
   right: 120px;
   transition: all 400ms ease-in-out;
 }
+
 .box.ng-hide {
   display: grid !important;
 }
