@@ -7,6 +7,8 @@
     <i class="ph-fill ph-seal-check" ng-if="myForm.firstname.$valid"></i>
   </div>
   <space></space>
+
+  <!-- LAST NAME -->
   <div class="input__field">
     <label for="lastname">Lastname:</label>
     <input ng-class="{'valid_input': myForm.lastname.$valid}" type="text" ng-required="true" ng-minlength="5" name="lastname" placeholder="Lastname" ng-model="user.lastname" />
@@ -14,6 +16,8 @@
     <i class="ph-fill ph-seal-check err" ng-if="myForm.lastname.$valid"></i>
   </div>
   <space></space>
+
+  <!-- AGE -->
   <div class="input__field">
     <label for="age">Age:</label>
     <input ng-class="{'valid_input': myForm.age.$valid}" ng-minlength="1" ng-maxlength="2" ng-required="true" type="text" name="age" placeholder="Age" ng-model="user.age" />
@@ -21,6 +25,8 @@
     <i class="ph-fill ph-seal-check" ng-if="myForm.age.$valid"></i>
   </div>
   <space></space>
+
+  <!-- COUNTRY -->
   <div class="input__field">
     <label for="age">Country:</label>
     <select ng-required="true" ng-model="user.country" aria-placeholder="Country" name="country" id="country" class="country_select">
@@ -32,6 +38,8 @@
     <i class="ph-fill ph-seal-check" ng-if="myForm.country.$valid"></i>
   </div>
   <space></space>
+
+  <!-- PHONE NUMBER -->
   <div class="input__field">
     <label for="phone">PhoneNumber: </label>
     <input ng-required="true" ng-model="user.phone" type="text" name="phone" placeholder="Phonenumber" />
@@ -39,6 +47,7 @@
     <i class="ph-fill ph-seal-check" ng-if="myForm.phone.$valid"></i>
   </div>
 
+  <!-- SUBMIT BUTTON -->
   <separator></separator>
   <button ng-disabled="myForm.$invalid" ng-click="onSubmit()" class="success m-0 w-full">SUBMIT FORM</button>
 
