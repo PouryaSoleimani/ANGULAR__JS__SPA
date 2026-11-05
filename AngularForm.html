@@ -8,9 +8,9 @@
       type="text"
       ng-required="true"
       ng-minlength="4"
+      ng-model="user.firstname"
       name="firstname"
       placeholder="firstname"
-      ng-model="user.firstname"
     />
     <p class="form__error" ng-if="!vm.isFormSubmitted && myForm.firstname.$touched && myForm.firstname.$invalid">
       Firstname is Required
