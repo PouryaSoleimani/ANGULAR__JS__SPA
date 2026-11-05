@@ -38,4 +38,8 @@ app.controller('AngularFormController', ['$scope', '$timeout', '$document',
       $scope.myForm.$setUntouched();
     };
 
+    $scope.firstNameLogger = function (e) {
+      console.log({ name: $scope.user.firstname })
+    }
+
   }])
