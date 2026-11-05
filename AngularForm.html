@@ -8,12 +8,16 @@
       type="text"
       ng-required="true"
       ng-minlength="4"
+      ng-maxlength="20"
       ng-model="user.firstname"
       name="firstname"
       placeholder="firstname"
     />
-    <p class="form__error" ng-if="!vm.isFormSubmitted && myForm.firstname.$touched && myForm.firstname.$invalid">
+    <p class="form__error" ng-if="!vm.isFormSubmitted && myForm.firstname.$touched && myForm.firstname.$invalid  && myForm.firstname.$error.required">
       Firstname is Required
+    </p>
+    <p class="form__error" ng-if="!vm.isFormSubmitted && myForm.firstname.$touched && myForm.firstname.$invalid && myForm.firstname.$error.maxlength">
+      Max Character is 20
     </p>
     <i class="ph-fill ph-seal-check" ng-if="myForm.firstname.$valid"></i>
   </div>
@@ -31,9 +35,7 @@
       placeholder="Lastname"
       ng-model="user.lastname"
     />
-    <p class="form__error" ng-if="!vm.isFormSubmitted && myForm.lastname.$touched && myForm.lastname.$invalid">
-      Lastname is Required
-    </p>
+    <p class="form__error" ng-if="!vm.isFormSubmitted && myForm.lastname.$touched && myForm.lastname.$invalid">Lastname is Required</p>
     <i class="ph-fill ph-seal-check err" ng-if="myForm.lastname.$valid"></i>
   </div>
   <space></space>
@@ -51,9 +53,7 @@
       placeholder="Age"
       ng-model="user.age"
     />
-    <p class="form__error" ng-if="!vm.isFormSubmitted && myForm.age.$touched && myForm.age.$invalid">
-      Please Enter a valid Age
-    </p>
+    <p class="form__error" ng-if="!vm.isFormSubmitted && myForm.age.$touched && myForm.age.$invalid">Please Enter a valid Age</p>
     <i class="ph-fill ph-seal-check" ng-if="myForm.age.$valid"></i>
   </div>
   <space></space>
@@ -61,21 +61,12 @@
   <!-- COUNTRY -->
   <div class="input__field">
     <label for="age">Country:</label>
-    <select
-      ng-required="true"
-      ng-model="user.country"
-      aria-placeholder="Country"
-      name="country"
-      id="country"
-      class="country_select"
-    >
+    <select ng-required="true" ng-model="user.country" aria-placeholder="Country" name="country" id="country" class="country_select">
       <option value="IRAN" selected>IRAN</option>
       <option value="USA">USA</option>
       <option value="GER">GERMANY</option>
     </select>
-    <p class="form__error" ng-if="!vm.isFormSubmitted && myForm.country.$touched && myForm.country.$invalid">
-      Please Select Your Country
-    </p>
+    <p class="form__error" ng-if="!vm.isFormSubmitted && myForm.country.$touched && myForm.country.$invalid">Please Select Your Country</p>
     <i class="ph-fill ph-seal-check" ng-if="myForm.country.$valid"></i>
   </div>
   <space></space>
@@ -84,9 +75,7 @@
   <div class="input__field">
     <label for="phone">PhoneNumber: </label>
     <input ng-required="true" ng-model="user.phone" type="text" name="phone" placeholder="Phonenumber" />
-    <p class="form__error" ng-if="!vm.isFormSubmitted && myForm.phone.$touched && myForm.phone.$invalid">
-      Please Enter a valid Phonenumber
-    </p>
+    <p class="form__error" ng-if="!vm.isFormSubmitted && myForm.phone.$touched && myForm.phone.$invalid">Please Enter a valid Phonenumber</p>
     <i class="ph-fill ph-seal-check" ng-if="myForm.phone.$valid"></i>
   </div>
 
