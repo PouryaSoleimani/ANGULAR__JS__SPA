@@ -13,18 +13,24 @@
       name="firstname"
       placeholder="firstname"
     />
-    <p
-      class="form__error"
-      ng-if="!vm.isFormSubmitted && myForm.firstname.$touched && myForm.firstname.$invalid  && myForm.firstname.$error.required"
-    >
-      Firstname is Required
-    </p>
-    <p
-      class="form__error"
-      ng-if="!vm.isFormSubmitted && myForm.firstname.$touched && myForm.firstname.$invalid && myForm.firstname.$error.maxlength"
-    >
-      Max Character is 20
-    </p>
+    <div class="flexa">
+      &nbsp;
+      <span class="badge !bg-pink-500 rounded-full px-4 text-white" ng-if="myForm.firstname.$pristine">IS PRISTINE</span>
+      <span class="badge !bg-red-500 rounded-full px-4 text-white" ng-if="myForm.firstname.$dirty">IS DIRTY</span>
+      <span class="badge !bg-emerald-500 rounded-full px-4 text-white" ng-if="myForm.firstname.$touched">IS TOUCHED</span>
+      <p
+        class="form__error"
+        ng-if="!vm.isFormSubmitted && myForm.firstname.$touched && myForm.firstname.$invalid  && myForm.firstname.$error.required"
+      >
+        Firstname is Required
+      </p>
+      <p
+        class="form__error"
+        ng-if="!vm.isFormSubmitted && myForm.firstname.$touched && myForm.firstname.$invalid && myForm.firstname.$error.maxlength"
+      >
+        Max Character is 20
+      </p>
+    </div>
     <i class="ph-fill ph-seal-check" ng-if="myForm.firstname.$valid"></i>
   </div>
   <space></space>
@@ -41,10 +47,7 @@
       placeholder="Lastname"
       ng-model="user.lastname"
     />
-    <p
-      class="form__error"
-      ng-if="!vm.isFormSubmitted && myForm.lastname.$touched && myForm.lastname.$invalid"
-    >
+    <p class="form__error" ng-if="!vm.isFormSubmitted && myForm.lastname.$touched && myForm.lastname.$invalid">
       Lastname is Required
     </p>
     <i class="ph-fill ph-seal-check err" ng-if="myForm.lastname.$valid"></i>
@@ -64,9 +67,7 @@
       placeholder="Age"
       ng-model="user.age"
     />
-    <p class="form__error" ng-if="!vm.isFormSubmitted && myForm.age.$touched && myForm.age.$invalid">
-      Please Enter a valid Age
-    </p>
+    <p class="form__error" ng-if="!vm.isFormSubmitted && myForm.age.$touched && myForm.age.$invalid">Please Enter a valid Age</p>
     <i class="ph-fill ph-seal-check" ng-if="myForm.age.$valid"></i>
   </div>
   <space></space>

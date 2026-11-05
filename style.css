@@ -773,6 +773,7 @@ section {
   .badge {
     margin-top: 6px;
     justify-self: end;
+    margin-inline: 4px;
   }
 
   &:hover {
@@ -1164,7 +1165,9 @@ a.user_anchor {
   font-size: 12px;
   margin-left: 12px;
   height: 100%;
-  display: grid;
+  display: inline-grid;
+  display: -ms-inline-grid;
+  display: -moz-inline-grid;
   align-items: center;
 }
 
