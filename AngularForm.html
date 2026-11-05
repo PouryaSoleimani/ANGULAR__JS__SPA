@@ -15,9 +15,9 @@
     />
     <div class="flexa">
       &nbsp;
-      <span class="badge !bg-pink-500 rounded-full px-4 text-white" ng-if="myForm.firstname.$pristine">IS PRISTINE</span>
-      <span class="badge !bg-red-500 rounded-full px-4 text-white" ng-if="myForm.firstname.$dirty">IS DIRTY</span>
-      <span class="badge !bg-emerald-500 rounded-full px-4 text-white" ng-if="myForm.firstname.$touched">IS TOUCHED</span>
+      <span class="badge" ng-if="myForm.firstname.$pristine">IS PRISTINE</span>
+      <span class="badge" ng-if="myForm.firstname.$dirty">IS DIRTY</span>
+      <span class="badge" ng-if="myForm.firstname.$touched">IS TOUCHED</span>
       <p
         class="form__error"
         ng-if="!vm.isFormSubmitted && myForm.firstname.$touched && myForm.firstname.$invalid  && myForm.firstname.$error.required"
