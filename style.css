@@ -1180,4 +1180,5 @@ a.user_anchor {
 .flex {
   display: flex;
   align-items: center;
+  gap: 4px;
 }
