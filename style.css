@@ -1176,3 +1176,8 @@ a.user_anchor {
   border: none;
   outline: none;
 }
+
+.flex {
+  display: flex;
+  align-items: center;
+}

@@ -15,8 +15,7 @@ app.controller('AngularFormController', ['$scope', '$timeout', '$document',
 
     $scope.toastToggle = function () {
       console.log('toast', $scope.toast)
-      $scope.toast.classList.add('success')
-      $scope.toast.classList.add('active');
+      $scope.toast.classList.add('success', 'active')
       $scope.toast.textContent = 'FORM SUBMITTED SUCCESSFULLY';
       $timeout(function () {
         $scope.toast.classList.remove('active')
