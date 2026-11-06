@@ -3,7 +3,7 @@ app.service('PersonService', function ($http, SharedData) {
 
   this.getAllPeople = function () {
     return $http.get(BASE_URL)
-  }
+  } 
 
   this.getPersonById = function (ID) {
     return allUsers.find(item => item.id == ID)
