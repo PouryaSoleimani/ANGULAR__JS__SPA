@@ -17,7 +17,7 @@ app.service('PersonService', function ($http, SharedData) {
     var result = $http({
       url: `${BASE_URL}${+id}`,
       method: "PUT",
-      data: person, 
+      data: person,
     })
     return result
   }
