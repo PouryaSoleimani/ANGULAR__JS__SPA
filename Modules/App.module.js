@@ -28,7 +28,7 @@ app.config(["$routeProvider", function ($routeProvider) {
   // PRODUCTS ROUTES
   $routeProvider.when("/AllProducts", {
     templateUrl: "/AllProducts.html",
-    controller: "AllProductsController", 
+    controller: "AllProductsController",
   });
   $routeProvider.when("/SearchProduct", {
     templateUrl: "/SearchProduct.html",

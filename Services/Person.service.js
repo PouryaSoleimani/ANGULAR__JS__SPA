@@ -1,6 +1,6 @@
 app.service('PersonService', function ($http, SharedData) {
   const BASE_URL = "https://fakestoreapi.com/users"
-  
+
   this.getAllPeople = function () {
     return $http.get(BASE_URL)
   }
@@ -30,3 +30,4 @@ app.service('PersonService', function ($http, SharedData) {
     return result;
   }
 }) 
+ 
