@@ -1,7 +1,14 @@
 //^ TEST PAGE CONTROLLER
-app.controller('TestPageController', ['$scope', '$http', 'sharedData',
-  function ($scope, $http, sharedData) {
+app.controller('TestPageController', ['$scope', '$http', 'sharedData', '$window',
+  function ($scope, $http, sharedData, $window) {
     showPanel = true;
+
+    var supabase = $window.supabase.createClient(
+      "https://xagmnwzigesgrlmgjosj.supabase.co",
+      "sb_publishable_XhFin34VLWcsVJeEjiYdcg_ZRToQFQP"
+    )
+
+    console.log({ supabase })
 
     $scope.vm = {
       people: ["mamad", 'majid', 'mahyar', 'ehsan', 'nima', 'milad'],

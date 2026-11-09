@@ -1,6 +1,7 @@
 // DEPENDENCIES FOR MODULE => NG_ROUTE
 var app = angular.module("UsersApp", ["ngRoute", "ngAnimate"]);
 
+
 // APP.FACTORY ==========================================================
 app.factory("SharedData", function () {
   return { value: 0, users: [] };
